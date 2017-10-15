@@ -1,0 +1,8 @@
+neofetch
+python-pywal
+i3-gaps
+bumblebee-status
+ttf-font-awesome
+pycharm-community
+discord
+slim
