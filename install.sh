@@ -6,3 +6,4 @@ mv -rv .scripts/ ~/
 systemctl enable slim.service
 sudo mv -v slim-minimal/ /usr/share/slim/themes/
 sudo mv -v slim.conf /etc/slim.conf
+sudo mv -v clipboard /etc/lib/urxvt/perl/
