@@ -1,7 +1,6 @@
 #binds
 set $mute --no-startup-id pactl set-sink-mute 0 1
 set $term i3-sensible-terminal
-set $interactive_term i3-sensible-terminal -e bash -i -c
 set $mod Mod1
 
 # Font for window titles. Will also be used by the bar unless a different font
@@ -189,9 +188,10 @@ bindsym $mod+b exec chromium
 bindsym $mod+Shift+b exec chromium --incognito
 bindsym $mod+p exec sudo charm
 bindsym $mod+g exec --no-startup-id gimp; workspace 5
-bindsym $mod+m workspace 2;exec $interactive_term cmus
-bindsym $mod+w exec $interactive_term wicd-curses
-bindsym $mod+n exec $interactive_term ranger
+bindsym $mod+m workspace 2;exec $term -e cmus
+bindsym $mod+w exec $term -e wicd-curses
+bindsym $mod+n exec $term -e ranger
+bindsym $mod+Shift+n exec $term -geometry 80x26 -name "floating_urxvt" -e ranger
 bindsym $mod+Shift+t exec --no-startup-id urxvt -geometry 80x26 -name "floating_urxvt"
 for_window [class="URxvt" instance="floating_urxvt$"] floating toggle
 bindsym $mod+z gaps inner current set 0; gaps outer current set 0
@@ -200,9 +200,9 @@ bindsym $mod+y gaps inner current plus 5
 bindsym $mod+Shift+y gaps inner current minus 5
 
 #print screens
-bindsym Print exec scrot -e 'xclip -se c -t image/png ~/$f'
-bindsym --release Shift+Print exec scrot -s -e 'xclip -se c -t image/png ~/$f'
-bindsym --release Control+Shift+Print exec scrot -s -e 'mv $f ~/Pictures/'
+bindsym Print exec scrot -e 'xclip -se c -t image/png ~/$f;rm -f ~/$f'
+bindsym --release Shift+Print exec scrot -s -e 'xclip -se c -t image/png ~/$f;rm -f ~/$f'
+bindsym --release Control+Shift+Print exec scrot -s -e 'xclip -se c -t image/png ~/$f;mv $f ~/Pictures/'
 
 #app places
 assign [class="Chromium"] → 1
@@ -227,10 +227,7 @@ bindsym $mod+Shift+Delete exec $mute ; workspace lmao ; exec $term -e htop ; exe
 
 #caps lock to esc
 exec_always --no-startup-id setxkbmap -layout us -variant altgr-intl -option caps:escape
-bindsym --release $mod+i exec --no-startup-id xdotool key --clearmodifiers Up
-bindsym --release $mod+u exec --no-startup-id xdotool key --clearmodifiers Down
-bindsym --release $mod+y exec --no-startup-id xdotool key --clearmodifiers Left
-bindsym --release $mod+o exec --no-startup-id xdotool key --clearmodifiers Right
+exec --no-startup-id xmodmap ~/.Xmodmap
 
 #shutdown
 bindsym $mod+Shift+e exec python ~/.scripts/i3-exit.py
