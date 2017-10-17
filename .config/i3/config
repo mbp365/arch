@@ -159,19 +159,13 @@ bar {
 for_window [class="^.*"] border pixel 0
 
 # Pulse Audio controls
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +3% #increase sound volume
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -3% #decrease sound volume
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle # mute sound
+bindsym $mod+F12 exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +3% #increase sound volume
+bindsym $mod+F11 exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -3% #decrease sound volume
+bindsym $mod+F10 exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle # mute sound
 
 # Sreen brightness controls
-bindsym XF86MonBrightnessUp exec xbacklight -inc 5 # increase screen brightness
-bindsym XF86MonBrightnessDown exec xbacklight -dec 5 # decrease screen brightness
-
-# Media player controls
-bindsym XF86AudioPlay exec playerctl play
-bindsym XF86AudioPause exec playerctl pause
-bindsym XF86AudioNext exec playerctl next
-bindsym XF86AudioPrev exec playerctl previous
+bindsym $mod+F6 exec xbacklight -inc 5 # increase screen brightness
+bindsym $mod+F5 exec xbacklight -dec 5 # decrease screen brightness
 
 # gaps
 gaps inner 10
@@ -227,7 +221,7 @@ bindsym $mod+Shift+Delete exec $mute ; workspace lmao ; exec $term -e htop ; exe
 
 #caps lock to esc
 exec_always --no-startup-id setxkbmap -layout us -variant altgr-intl -option caps:escape
-exec --no-startup-id xmodmap ~/.Xmodmap
+exec --no-startup-id "sleep 5;xmodmap ~/.config/.Xmodmap"
 
 #shutdown
 bindsym $mod+Shift+e exec python ~/.scripts/i3-exit.py
