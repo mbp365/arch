@@ -187,16 +187,19 @@ bindsym $mod+w exec $term -e wicd-curses
 bindsym $mod+n exec $term -e ranger
 bindsym $mod+Shift+n exec $term -geometry 80x26 -name "floating_urxvt" -e ranger
 bindsym $mod+Shift+t exec --no-startup-id urxvt -geometry 80x26 -name "floating_urxvt"
-for_window [class="URxvt" instance="floating_urxvt$"] floating toggle
+for_window [class="URxvt" instance="floating_urxvt$"] floating enable
 bindsym $mod+z gaps inner current set 0; gaps outer current set 0
 bindsym $mod+Shift+z gaps inner current set 10; gaps outer current set 10
 bindsym $mod+y gaps inner current plus 5
 bindsym $mod+Shift+y gaps inner current minus 5
 
 #print screens
-bindsym Print exec scrot -e 'xclip -se c -t image/png ~/$f;rm -f ~/$f'
-bindsym --release Shift+Print exec scrot -s -e 'xclip -se c -t image/png ~/$f;rm -f ~/$f'
-bindsym --release Control+Shift+Print exec scrot -s -e 'xclip -se c -t image/png ~/$f;mv $f ~/Pictures/'
+bindsym Print exec "scrot -e 'xclip -se c -t image/png ~/$f;rm ~/$f'"
+bindsym --release Shift+Print exec "scrot -s -e 'xclip -se c -t image/png ~/$f;rm ~/$f'"
+bindsym --release Control+Shift+Print exec "scrot -s -e 'xclip -se c -t image/png ~/$f;mv $f ~/Pictures/'"
+#screen record
+bindsym F8 exec ~/.scripts/screencap.sh
+bindsym $mod+F8 exec killall ffmpeg
 
 #app places
 assign [class="Chromium"] → 1
