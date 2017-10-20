@@ -1,0 +1,197 @@
+sw_volume: 100
+audio_device_state:1:mpd alsamixer-output
+audio_device_state:1:toggle_visualizer
+state: play
+current: 7
+time: 4.021000
+random: 0
+repeat: 0
+single: 0
+consume: 0
+crossfade: 0
+mixrampdb: 0.000000
+mixrampdelay: -1.000000
+playlist_begin
+0:Aerosmith - Walk This Way.mp3
+1:Andy Hunter - The Wonders Of You.mp3
+2:Billy Joel - Piano Man.mp3
+3:Boku no Hero Academia - Hero A.opus
+4:Boku no Hero Academia - Kibasen.mp3
+5:Boku no Hero Academia - Koutekishu to Kaite.mp3
+6:Boku no Hero Academia - Sendai no Meiyuu.mp3
+7:Boku no Hero Academia - Shougaibutsu Kyousou.mp3
+8:Boku no Hero Academia - Tori ni Iku.mp3
+9:Boku no Hero Academia - Weeee Are Fu×kin Super Star.mp3
+10:Boku no Hero Academia - You Say Run.mp3
+11:Boney M. - Rasputin.mp3
+12:Boston - More than A Feeling.mp3
+13:Calvin Harris - Feels.mp3
+14:Caravan Palace - Lone Digger.mp3
+15:Cowboy Bebop - Call Me Call Me.mp3
+16:Cowboy Bebop - The Real Folk Blues.mp3
+17:Cristal Method - Born Too Slow.mp3
+18:Davie - 12 string bass solo.mp3
+19:Davie - 15 string solo.mp3
+20:Davie - acoustic bass solo.mp3
+21:Davie - Crash bandicoot meets bass.mp3
+22:Davie - ukulele bass solo.mp3
+23:Detective Conan - The New Detective Conan Main Theme.mp3
+24:Dilated Peoples - Who's Who.mp3
+25:Dr. Dre - Forgot about Dre.mp3
+26:Earth, Wind & Fire - Boogie Wonderland.mp3
+27:Earth, Wind & Fire - Let's Groove.mp3
+28:Earth, Wind & Fire - September.mp3
+29:element eighty - broken promises.mp3
+30:Eminem - Just Lose It.mp3
+31:Eminem - Lose yourself.mp3
+32:Eminem - Stan.mp3
+33:Eminem - The real slim shady.mp3
+34:Eminem - Without Me.mp3
+35:finger eleven - Paralyzer.mp3
+36:Foo Fighters - The Pretender.mp3
+37:Foo Fighters - Walk lyrics.mp3
+38:Foster The People - Houdini.mp3
+39:Foster The People - Pumped up Kicks.mp3
+40:Initial D - Deja Vu.mp3
+41:Initial D - No One Sleep In Tokyo.mp3
+42:Junior Senior - Move Your Feet.mp3
+43:Killradio - Scavenger.mp3
+44:Kool & The Gang - Get Down On It.mp3
+45:Laid Back - Sunshine Reggae.mp3
+46:Linkin Park - Bleed It Out.mp3
+47:Lloy Price - Stagger Lee.mp3
+48:Manuel - Gas Gas Gas.mp3
+49:Mario Biondi - Do You Feel Like I Feel.mp3
+50:Mario Biondi - Just The Way You Are.mp3
+51:Mario Biondi - Love is a Temple.mp3
+52:Mario Biondi - Rio De Janeiro Blue.mp3
+53:Mario Biondi - Santa Claus Is Coming to Town.mp3
+54:Mario Biondi - This Is What You Are.mp3
+55:Metallica - Fuel.mp3
+56:Michael Jackson - Bad.mp3
+57:Michael Jackson - Beat it.mp3
+58:Michael Jackson - Earth song.mp3
+59:Michael Jackson - Smooth Criminal.mp3
+60:Mystikal - Smashing the Gas.mp3
+61:Nate Dogg - Keep It Coming.mp3
+62:Queen - Don't stop me.mp3
+63:Queens Of The Stone Age - In My Head.mp3
+64:Sam Cooke - Wonderful World.mp3
+65:Snoop Dogg feat. The Doors - Riders on the Storm.mp3
+66:Static-X - The Only.mp3
+67:Substance - Haste The Day.mp3
+68:The Animals - House Of The Rising Sun.mp3
+69:The Black Keys - Gold On The Ceiling.mp3
+70:The Black Keys - Lonely Boy.mp3
+71:The Mar-keys - Last Night.mp3
+72:The Marvelettes - Please Mr. Postman.mp3
+73:The Miracles - Shop Around.mp3
+74:The Platters - ONLY YOU.mp3
+75:The Seatbelts - Gotta Knock a Little Harder.mp3
+76:X-Ecutioners - Body Rock.mp3
+77:Yes - Roundabout.mp3
+78:06 Sleep Together.flac
+79:2005 - Deadwing [2006, Japan, WHD Ent. Inc., IECP-20003~4]/CD 1 [IECP-20003]/01. Deadwing.mp3
+80:2005 - Deadwing [2006, Japan, WHD Ent. Inc., IECP-20003~4]/CD 1 [IECP-20003]/02. Shallow.mp3
+81:2005 - Deadwing [2006, Japan, WHD Ent. Inc., IECP-20003~4]/CD 1 [IECP-20003]/03. Lazarus.mp3
+82:2005 - Deadwing [2006, Japan, WHD Ent. Inc., IECP-20003~4]/CD 1 [IECP-20003]/04. Halo.mp3
+83:2005 - Deadwing [2006, Japan, WHD Ent. Inc., IECP-20003~4]/CD 1 [IECP-20003]/05. Arriving Somewhere But Not Here.mp3
+84:2005 - Deadwing [2006, Japan, WHD Ent. Inc., IECP-20003~4]/CD 1 [IECP-20003]/06. Mellotron Scratch.mp3
+85:2005 - Deadwing [2006, Japan, WHD Ent. Inc., IECP-20003~4]/CD 1 [IECP-20003]/07. Open Car.mp3
+86:2005 - Deadwing [2006, Japan, WHD Ent. Inc., IECP-20003~4]/CD 1 [IECP-20003]/08. The Start of Something Beautiful.mp3
+87:2005 - Deadwing [2006, Japan, WHD Ent. Inc., IECP-20003~4]/CD 1 [IECP-20003]/09. Glass Arm Shattering.mp3
+88:2005 - Deadwing [2006, Japan, WHD Ent. Inc., IECP-20003~4]/CD 1 [IECP-20003]/10. Shesmovedon.mp3
+89:2005 - Deadwing [2006, Japan, WHD Ent. Inc., IECP-20003~4]/CD 2 - Introduction To... [IECP-20004]/01. Even Less.mp3
+90:2005 - Deadwing [2006, Japan, WHD Ent. Inc., IECP-20003~4]/CD 2 - Introduction To... [IECP-20004]/02. Pure Narcotic.mp3
+91:2005 - Deadwing [2006, Japan, WHD Ent. Inc., IECP-20003~4]/CD 2 - Introduction To... [IECP-20004]/03. How Is Your Life Today.mp3
+92:2005 - Deadwing [2006, Japan, WHD Ent. Inc., IECP-20003~4]/CD 2 - Introduction To... [IECP-20004]/04. Buying New Soul.mp3
+93:2005 - Deadwing [2006, Japan, WHD Ent. Inc., IECP-20003~4]/CD 2 - Introduction To... [IECP-20004]/05. Russia on Ice (live, from ''Warszawa'').mp3
+94:2005 - Deadwing [2006, Japan, WHD Ent. Inc., IECP-20003~4]/CD 2 - Introduction To... [IECP-20004]/06. Blackest Eyes.mp3
+95:2005 - Deadwing [2006, Japan, WHD Ent. Inc., IECP-20003~4]/CD 2 - Introduction To... [IECP-20004]/07. Trains (edit).mp3
+96:2005 - Deadwing [2006, Japan, WHD Ent. Inc., IECP-20003~4]/CD 2 - Introduction To... [IECP-20004]/08. Open Car.mp3
+97:2005 - Deadwing [2006, Japan, WHD Ent. Inc., IECP-20003~4]/CD 2 - Introduction To... [IECP-20004]/09. Lazarus (radio edit).mp3
+98:2005 - Deadwing [2006, Japan, WHD Ent. Inc., IECP-20003~4]/CD 2 - Introduction To... [IECP-20004]/10. Halo (live).mp3
+99:2007 - Fear Of A Blank Planet (2011, BSDLS 007)/01 Fear Of A Blank Planet.flac
+100:2007 - Fear Of A Blank Planet (2011, BSDLS 007)/02 My Ashes.flac
+101:2007 - Fear Of A Blank Planet (2011, BSDLS 007)/03 Anesthetize.flac
+102:2007 - Fear Of A Blank Planet (2011, BSDLS 007)/04 Sentimental.flac
+103:2007 - Fear Of A Blank Planet (2011, BSDLS 007)/05 Way Out Of Here.flac
+104:2009 - The Incident [Japan, WHD Ent. Inc., IECP-10198]/CD 1/01. Occam's Razor.mp3
+105:2009 - The Incident [Japan, WHD Ent. Inc., IECP-10198]/CD 1/02. The Blind House.mp3
+106:2009 - The Incident [Japan, WHD Ent. Inc., IECP-10198]/CD 1/03. Great Expectations.mp3
+107:2009 - The Incident [Japan, WHD Ent. Inc., IECP-10198]/CD 1/04. Kneel And Disconnect.mp3
+108:2009 - The Incident [Japan, WHD Ent. Inc., IECP-10198]/CD 1/05. Drawing The Line.mp3
+109:2009 - The Incident [Japan, WHD Ent. Inc., IECP-10198]/CD 1/06. The Incident.mp3
+110:2009 - The Incident [Japan, WHD Ent. Inc., IECP-10198]/CD 1/07. Your Unpleasant Family.mp3
+111:2009 - The Incident [Japan, WHD Ent. Inc., IECP-10198]/CD 1/08. The Yellow Windows Of The Evening Train.mp3
+112:2009 - The Incident [Japan, WHD Ent. Inc., IECP-10198]/CD 1/09. Time Flies.mp3
+113:2009 - The Incident [Japan, WHD Ent. Inc., IECP-10198]/CD 1/10. Degree Zero Of Liberty.mp3
+114:2009 - The Incident [Japan, WHD Ent. Inc., IECP-10198]/CD 1/11. Octane Twisted.mp3
+115:2009 - The Incident [Japan, WHD Ent. Inc., IECP-10198]/CD 1/12. The Seance.mp3
+116:2009 - The Incident [Japan, WHD Ent. Inc., IECP-10198]/CD 1/13. Circle Of Manias.mp3
+117:2009 - The Incident [Japan, WHD Ent. Inc., IECP-10198]/CD 1/14. I Drive The Hearse.mp3
+118:2009 - The Incident [Japan, WHD Ent. Inc., IECP-10198]/CD 2/01. Flicker.mp3
+119:2009 - The Incident [Japan, WHD Ent. Inc., IECP-10198]/CD 2/02. Bonnie The Cat.mp3
+120:2009 - The Incident [Japan, WHD Ent. Inc., IECP-10198]/CD 2/03. Black Dahlia.mp3
+121:2009 - The Incident [Japan, WHD Ent. Inc., IECP-10198]/CD 2/04. Remember Me Lover.mp3
+122:2009 - The Incident [Japan, WHD Ent. Inc., IECP-10198]/CD 2/05. Way Out Of Here (Bonus).mp3
+123:2009 - The Incident [Japan, WHD Ent. Inc., IECP-10198]/CD 2/06. What Happend Now (Bonus).mp3
+124:2014 - The Joy Of Motion/01. Ka$cade.mp3
+125:2014 - The Joy Of Motion/02. Lippincott.mp3
+126:2014 - The Joy Of Motion/03. Air Chrysalis.mp3
+127:2014 - The Joy Of Motion/04. Another Year.mp3
+128:2014 - The Joy Of Motion/05. Physical Education.mp3
+129:2014 - The Joy Of Motion/06. Tooth And Claw.mp3
+130:2014 - The Joy Of Motion/07. Crescent.mp3
+131:2014 - The Joy Of Motion/08. The Future That Awaited Me.mp3
+132:2014 - The Joy Of Motion/09. Para Mexer.mp3
+133:2014 - The Joy Of Motion/10. The Woven Web.mp3
+134:2014 - The Joy Of Motion/11. Mind = Spun.mp3
+135:2014 - The Joy Of Motion/12. Nephele.mp3
+136:2015 - Animals As Leaders (Encore Edition)/01 Tempting Time.mp3
+137:2015 - Animals As Leaders (Encore Edition)/02 Soraya.mp3
+138:2015 - Animals As Leaders (Encore Edition)/03 Thoroughly at Home.mp3
+139:2015 - Animals As Leaders (Encore Edition)/04 On Impulse.mp3
+140:2015 - Animals As Leaders (Encore Edition)/05 Tessitura.mp3
+141:2015 - Animals As Leaders (Encore Edition)/06 Behaving Badly.mp3
+142:2015 - Animals As Leaders (Encore Edition)/07 The Price of Everything and the Value of Nothing.mp3
+143:2015 - Animals As Leaders (Encore Edition)/08 CAFO.mp3
+144:2015 - Animals As Leaders (Encore Edition)/09 Inamorata.mp3
+145:2015 - Animals As Leaders (Encore Edition)/10 Point to Point.mp3
+146:2015 - Animals As Leaders (Encore Edition)/11 Modern Meat.mp3
+147:2015 - Animals As Leaders (Encore Edition)/12 Song of Solomon.mp3
+148:2015 - Animals As Leaders (Encore Edition)/13 Wave Of Babies.mp3
+149:2015 - Animals As Leaders (Encore Edition)/14 Kalimba.mp3
+150:2015 - Animals As Leaders (Encore Edition)/15 Orea (Demo).mp3
+151:2016 - The Madness of Many/01 Arithmophobia.mp3
+152:2016 - The Madness of Many/02 Ectogenesis.mp3
+153:2016 - The Madness of Many/03 Cognitive Contortions.mp3
+154:2016 - The Madness of Many/04 Inner Assassins.mp3
+155:2016 - The Madness of Many/05 Private Visions of the World.mp3
+156:2016 - The Madness of Many/06 Backpfeifengesicht.mp3
+157:2016 - The Madness of Many/07 Transcentience.mp3
+158:2016 - The Madness of Many/08 The Glass Bridge.mp3
+159:2016 - The Madness of Many/09 The Brain Dance.mp3
+160:2016 - The Madness of Many/10 Aepirophobia.mp3
+161:Clever Girl/2010 - No Drum and Bass in the Jazz Room/01 - Elm.mp3
+162:Clever Girl/2010 - No Drum and Bass in the Jazz Room/02 - ohmygodiloveyoupleasedontleaveme.mp3
+163:Clever Girl/2010 - No Drum and Bass in the Jazz Room/03 - Sleepyhead Symphony.mp3
+164:Clever Girl/2010 - No Drum and Bass in the Jazz Room/04 - Teleblister.mp3
+165:Porcupine Tree Main discography/2005 - Deadwing 2CD (WHD Entertainment, Inc. IECP-20003-4 Japan)/CD1/Porcupine Tree - Deadwing - Japan CD1 (IECP-20003).flac
+166:Porcupine Tree Main discography/2005 - Deadwing 2CD (WHD Entertainment, Inc. IECP-20003-4 Japan)/CD2  - Japan Bonus Disc/Porcupine Tree - Deadwing - Japan Bonus Disc (IECP-20004).flac
+167:Porcupine Tree Main discography/2007 - Nil Recurring (EP) (WHD Entertainment, Inc. IECP-10123 Japan)/01 - Nil Recurring.flac
+168:Porcupine Tree Main discography/2007 - Nil Recurring (EP) (WHD Entertainment, Inc. IECP-10123 Japan)/02 - Normal.flac
+169:Porcupine Tree Main discography/2007 - Nil Recurring (EP) (WHD Entertainment, Inc. IECP-10123 Japan)/03 - Cheating The Polygraph.flac
+170:Porcupine Tree Main discography/2007 - Nil Recurring (EP) (WHD Entertainment, Inc. IECP-10123 Japan)/04 - What Happens Now .flac
+171:Porcupine Tree Main discography/2007 - Nil Recurring (EP) (WHD Entertainment, Inc. IECP-10123 Japan)/05 - Fear Of A Blank Planet (Edit Version).flac
+song_begin: https://chiru.no:8081/stream.flac
+Title: 涼宮ハルヒの憂鬱 新キャラクターソング Vol.5 - キョン(杉田智和) - キョン(杉田智和) - だがそれだけじゃない
+Name: chiru.no flac
+mtime: 0
+song_end
+song_begin: http://stream-dc1.radioparadise.com/aac-320
+Title: Porcupine Tree - Sentimental
+Name: Radio Paradise - Naim exclusive
+mtime: 0
+song_end
+playlist_end
