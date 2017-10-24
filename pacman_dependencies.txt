@@ -12,7 +12,7 @@ wavpack
 opusfile
 libpulse
 alsalib
-chromium
+firefox
 gimp
 youtube-dl
 scrot
@@ -35,3 +35,4 @@ ntfs-3g
 dosfstools
 yaourt
 xclip
+rtorrent
