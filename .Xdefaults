@@ -8,4 +8,5 @@ URxvt.perl-ext-common:	default,clipboard,matcher
 URxvt.keysym.Shift-Control-V: perl:clipboard:paste
 URxvt.iso14755: False
 URxvt.url-launcher:	/usr/bin/firefox
-URxvt.matcher.button:	1
+URxvt.keysym.Control-l: perl:matcher:last
+URxvt.matcher.button: 1
