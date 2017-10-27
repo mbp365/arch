@@ -67,3 +67,9 @@ def_key "g"
 def_key "U"
   update_database
 
+def_key "x"
+  delete_playlist_items
+def_key "x"
+  delete_browser_items
+def_key "x"
+  delete_stored_playlist
