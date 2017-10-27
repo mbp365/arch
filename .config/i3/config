@@ -3,6 +3,7 @@ set $mute --no-startup-id pactl set-sink-mute 0 1
 set $term i3-sensible-terminal
 set $mod Mod1
 set $music ncmpcpp
+set $browser firefox-nightly
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -179,9 +180,8 @@ exec_always --no-startup-id wal -R
 bindsym $mod+Tab workspace next
 
 #bindings
-bindsym $mod+b exec chromium
-bindsym $mod+Shift+b exec chromium --incognito
-bindsym $mod+p exec sudo pycharm
+bindsym $mod+b exec $browser
+bindsym $mod+p exec pycharm
 bindsym $mod+g exec --no-startup-id gimp; workspace 5
 bindsym $mod+m workspace 3;exec $term -e $music
 bindsym $mod+Shift+m exec ~/.scripts/save_song_name.sh
@@ -204,19 +204,19 @@ bindsym F8 exec "~/.scripts/screencap.sh & notify-send recording started"
 bindsym $mod+F8 exec "killall ffmpeg & notify-send recording ended"
 
 #app places
-assign [class="Chromium"] → 1
 assign [class="discord"] → 4
 assign [class="pycharm"] → 3
 for_window [title="GIMP Startup"] move workspace 5
 for_window [class="Gimp"] move workspace 5
 for_window [window_role="gimp-dock"] floating disable; move left; resize shrink width 50 px or 50ppt
 for_window [window_role="gimp-toolbox"] floating disable;  resize grow width 30 px or 30ppt
-#chromium popups
+#browser popups
 for_window [window_role="pop-up"] floating enable
 
 #startup
-exec --no-startup-id chromium
+exec --no-startup-id $browser
 exec --no-startup-id discord
+exec --no-startup-id nm-applet
 
 #notification
 exec --no-startup-id dunst
