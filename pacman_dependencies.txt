@@ -11,8 +11,6 @@ libmp4v2
 wavpack
 opusfile
 libpulse
-alsalib
-firefox
 gimp
 youtube-dl
 scrot
@@ -36,3 +34,12 @@ dosfstools
 yaourt
 xclip
 rtorrent
+xorg-xinit
+xorg
+ranger
+ttf-inconsolata
+mpc
+ncmpcpp
+gvim
+ttf-dejavu
+xf86-video-intel

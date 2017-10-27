@@ -6,3 +6,4 @@ ttf-font-awesome
 pycharm-community
 discord
 slim
+firefox-nightly
