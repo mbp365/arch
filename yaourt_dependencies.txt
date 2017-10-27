@@ -7,3 +7,4 @@ pycharm-community
 discord
 slim
 firefox-nightly
+split2flac

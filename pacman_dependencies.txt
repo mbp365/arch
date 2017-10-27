@@ -46,3 +46,4 @@ xf86-video-intel
 dunst
 cuetools
 shntool
+mpv
