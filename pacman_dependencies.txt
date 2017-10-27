@@ -43,3 +43,4 @@ ncmpcpp
 gvim
 ttf-dejavu
 xf86-video-intel
+dunst
