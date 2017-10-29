@@ -179,14 +179,14 @@ gaps outer 10
 # coloscheme
 exec_always --no-startup-id wal -R
 
+
+####bindings#######3
 #tab switch
 bindsym $mod+Tab workspace next
-
-#bindings
 bindsym $mod+b exec $browser
 bindsym $mod+p exec pycharm
 bindsym $mod+g exec --no-startup-id gimp; workspace 5
-bindsym $mod+m exec "$term -tr -sh 50 -e $music & $term -tr -sh 50 -e vis"
+bindsym $mod+m workspace 3; exec ~/.scripts/music_tiling.sh
 bindsym $mod+Shift+m exec ~/.scripts/save_song_name.sh
 bindsym $mod+w exec $term -e wicd-curses
 bindsym $mod+n exec $term -e ranger
@@ -197,11 +197,15 @@ bindsym $mod+z gaps inner current set 0; gaps outer current set 0
 bindsym $mod+Shift+z gaps inner current set 10; gaps outer current set 10
 bindsym $mod+y gaps inner current plus 5
 bindsym $mod+Shift+y gaps inner current minus 5
-
+#hide everything bind:
+bindsym $mod+Shift+Delete exec $mute ; workspace lmao ; exec $term -e htop ; exec ranger
+#cmus controls
+bindsym $mod+Pause exec --no-startup-id mpc toggle
+bindsym $mod+Right exec --no-startup-id mpc next
+bindsym $mod+Left exec --no-startup-id mpc prev
 #print screens
 bindsym Print exec "scrot -e 'xclip -se c -t image/png ~/$f;rm ~/$f'"
 bindsym --release Shift+Print exec "scrot -s -e 'xclip -se c -t image/png ~/$f;rm ~/$f'"
-bindsym --release Control+Shift+Print exec "scrot -s -e 'xclip -se c -t image/png ~/$f;mv $f ~/Pictures/'"
 #screen record
 bindsym F8 exec "~/.scripts/screencap.sh & notify-send recording started"
 bindsym $mod+F8 exec "killall ffmpeg & notify-send recording ended"
@@ -223,15 +227,10 @@ exec --no-startup-id discord
 #notification
 exec --no-startup-id dunst
 
-#hide everything:
-bindsym $mod+Shift+Delete exec $mute ; workspace lmao ; exec $term -e htop ; exec ranger
-
+#hide cursor
+unclutter &
 
 #caps lock to esc
 exec_always --no-startup-id setxkbmap -layout us -variant altgr-intl -option caps:escape
 exec_always --no-startup-id "sleep 7;xmodmap ~/.config/.Xmodmap"
 
-#cmus controls
-bindsym $mod+Pause exec --no-startup-id mpc toggle
-bindsym $mod+Right exec --no-startup-id mpc next
-bindsym $mod+Left exec --no-startup-id mpc prev
