@@ -212,7 +212,7 @@ bindsym $mod+F8 exec "killall ffmpeg & notify-send recording ended"
 
 #app places
 assign [class="discord"] → 4
-assign [class="pycharm"] → 3
+assign [class="pycharm"] → 2
 for_window [title="GIMP Startup"] move workspace 5
 for_window [class="Gimp"] move workspace 5
 for_window [window_role="gimp-dock"] floating disable; move left; resize shrink width 50 px or 50ppt
