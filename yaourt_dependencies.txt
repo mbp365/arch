@@ -8,3 +8,5 @@ discord
 slim
 firefox-nightly
 split2flac
+urxvt-resize-font-git
+cli-visualizer
