@@ -153,7 +153,7 @@ bar {
         inactive_workspace $fg $bg $fg
         urgent_workspace   $col3 $bg $fg
     }
-	status_command bumblebee-status -m mpd spacer cpu disk:root memory pasink brightness battery date time -p root.path=/ memory.format="{used}" root.format="{used}" spacer.text="  " time.format="%H:%M " date.format="%a, %b %d" -t wal
+	status_command bumblebee-status -m mpd spacer pacman cpu disk:root memory pasink brightness battery date time -p root.path=/ memory.format="{used}" root.format="{used}" spacer.text="  " time.format="%H:%M " date.format="%a, %b %d" -t wal
 }
 
 
@@ -183,7 +183,7 @@ bindsym $mod+Tab workspace next
 bindsym $mod+b exec $browser
 bindsym $mod+p exec pycharm
 bindsym $mod+g exec --no-startup-id gimp; workspace 5
-bindsym $mod+m workspace 3;exec $term -e $music
+bindsym $mod+m exec $term -e $music
 bindsym $mod+Shift+m exec ~/.scripts/save_song_name.sh
 bindsym $mod+w exec $term -e wicd-curses
 bindsym $mod+n exec $term -e ranger
@@ -216,7 +216,6 @@ for_window [window_role="pop-up"] floating enable
 #startup
 exec --no-startup-id $browser
 exec --no-startup-id discord
-exec --no-startup-id nm-applet
 
 #notification
 exec --no-startup-id dunst
