@@ -143,6 +143,9 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 bar {
+    mode hide
+    hidden_state hide
+    modifier Mod4
 	position top
     colors {
         background $bg
@@ -183,7 +186,7 @@ bindsym $mod+Tab workspace next
 bindsym $mod+b exec $browser
 bindsym $mod+p exec pycharm
 bindsym $mod+g exec --no-startup-id gimp; workspace 5
-bindsym $mod+m exec $term -e $music
+bindsym $mod+m exec "$term -tr -sh 50 -e $music & $term -tr -sh 50 -e vis"
 bindsym $mod+Shift+m exec ~/.scripts/save_song_name.sh
 bindsym $mod+w exec $term -e wicd-curses
 bindsym $mod+n exec $term -e ranger

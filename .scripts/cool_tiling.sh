@@ -8,7 +8,7 @@ fi
 cp ~/.Xdefaults tmp
 echo "urxvt*transparent: true">>~/.Xdefaults
 echo "urxvt*shading: 60">>~/.Xdefaults
-i3-msg workspace 9
+i3-msg workspace "1337"
 urxvt -e sh -c "sleep 1.4;ranger ~/Pictures/memes;" &
 i3-msg move right
 urxvt -e sh -c "sleep 1.4;neofetch -s;" &
