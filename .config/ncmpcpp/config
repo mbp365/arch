@@ -1,14 +1,29 @@
-visualizer_type = spectrum
-song_list_format = {$4%a - }{%t}|{$8%f$9}$R{$3(%l)$9}
-song_status_format = $b{{$8"%t"}} $3by {$4%a{ $3in $7%b{ (%y)}} $3}|{$8%f}
-song_library_format = {%n - }{%t}|{%f}
-alternative_header_first_line_format = $b$1$aqqu$/a$9 {%t}|{%f} $1$atqq$/a$9$/b
-alternative_header_second_line_format = {{$4$b%a$/b$9}{ - $7%b$9}{ ($4%y$9)}}|{%D}
-current_item_prefix = $(cyan)$r$b
-current_item_suffix = $/r$(end)$/b
-current_item_inactive_column_prefix = $(magenta)$r
-current_item_inactive_column_suffix = $/r$(end)
-display_volume_level = no
-ignore_leading_the = yes
-ncmpcpp_directory = ~/.config/ncmpcpp
-mpd_music_dir = "~/Music"
+####################################################
+## dipilibupap@gmail.com
+## Largely Inspire By crshd and Him .
+####################################################
+
+# Playlist
+song_columns_list_format = "(6f)[blue]{l} (25)[red]{a} (40)[green]{t|f} (30)[yellow]{b}"
+now_playing_prefix = "$b$5»$7»$1» "
+now_playing_suffix = "$/b"
+playlist_display_mode = "columns" (classic/columns)
+autocenter_mode = "yes"
+centered_cursor = "yes"
+
+# Bars
+song_status_format = "$2%a $1• $3%t $1• $4%b {(Disc %d) }$1• $5%y$1"
+progressbar_look = "─╼·"
+titles_visibility = "no"
+
+# Browser
+browser_playlist_prefix = "$2plist »$9 "
+browser_display_mode = "columns" (classic/columns)
+
+# Othersl
+song_window_title_format = "MPD: {%a > }{%t}{ [%b{ Disc %d}]}|{%f}"
+search_engine_display_mode = "columns" (classic/columns)
+follow_now_playing_lyrics = "yes"
+
+colors_enabled = "yes"
+playlist_disable_highlight_delay = 0

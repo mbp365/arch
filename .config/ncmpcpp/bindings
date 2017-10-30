@@ -73,3 +73,9 @@ def_key "x"
   delete_browser_items
 def_key "x"
   delete_stored_playlist
+
+def_key "left"
+  seek_backward
+
+def_key "right"
+  seek_forward
