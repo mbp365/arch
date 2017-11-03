@@ -3,8 +3,6 @@ stty -ixon
 export TERM=rxvt-256color
 export PS1="\[$(tput bold)\]\[$(tput setaf 1)\][\[$(tput setaf 3)\]\u\[$(tput setaf 2)\]@\[$(tput setaf 4)\]\h \[$(tput setaf 5)\]\W\[$(tput setaf 1)\]]\[$(tput setaf 7)\]\\$ \[$(tput sgr0)\]"
 
-shopt -s autocd #Allows you to cd into directory merely by typing the directory name.
-
 #Some aliases
 alias v="vim"
 alias ka="killall"
@@ -52,3 +50,4 @@ alias vimrc="vim ~/.vimrc"
 alias rangerrc="vim ~/.config/ranger/rc.conf"
 export EDITOR='vim'
 export VISUAL='vim'
+alias pastepic="xclip -selection clipboard -t image/png -o > pic.png"
