@@ -412,7 +412,6 @@ endif
 
 noremap YY "+y<CR>
 noremap <leader>p "+gP<CR>
-noremap XX "+x<CR>
 
 if has('macunix')
   " pbcopy for OSX copy/paste
@@ -537,6 +536,8 @@ endif
 colorscheme wal
 let g:tex_flavor='latex'
 
-
 vnoremap <C-c> :w !xclip -i -sel c<CR><CR>
-noremap <C-v> :r !xclip -o -sel -c<CR><CR>
+nnoremap <C-v> :r !xclip -o -sel -c<CR><CR>
+nnoremap x "_dl
+nnoremap X "_dh
+nnoremap U <C-r>
