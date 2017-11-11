@@ -21,29 +21,17 @@ alias nf="clear && neofetch"
 alias newnet="sudo systemctl restart NetworkManager"
 alias tn="ping 8.8.8.8"
 
-#Music
-alias pause="mpc toggle"
-alias next="mpc next"
-alias prev="mpc prev"
-alias trupause="mpc pause"
-alias beg="mpc seek 0%"
-alias lilbak="mpc seek -10"
-alias lilfor="mpc seek +10"
-alias bigbak="mpc seek -120"
-alias bigfor="mpc seek +120"
-
-
 #Check the weather:
 weath() { curl wttr.in/$1 ;}
 
 #Directory Shortcuts:
 alias h="cd ~ && ls -a"
-alias d="cd ~/Downloads && ls -a"
-alias pics="cd ~/Pictures && ls -a"
-alias m="cd ~/Music && ls -a"
+alias d="cd ~/downloads && ls -a"
+alias pics="cd ~/pictures && ls -a"
+alias m="cd ~/music && ls -a"
 alias s="cd ~/.scripts && ls -a"
 alias c="cd ~/.config && ls -a"
-alias C="cd ~/Code && ls -a"
+alias C="cd ~/code && ls -a"
 
 alias i3conf="vim ~/.config/i3/config"
 alias vimrc="vim ~/.vimrc"

@@ -46,5 +46,5 @@ then
 fi
 
 python tags.py "$file_name"
-mv "$file_name" $HOME"/Music/$file_name"
+mv "$file_name" $HOME"/music/$file_name"
 echo "$file_name" created
