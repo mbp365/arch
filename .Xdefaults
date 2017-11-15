@@ -1,8 +1,9 @@
 URxvt.intensityStyles:	false
 URxvt.depth:		32
-URxvt.font: 		xft:monospace:size=11
+URxvt.font: xft:Inconsolata For Powerline:size=12
 URxvt.scrollBar:	false
 URxvt.cursorColor:	white
+URxvt.letterSpace:0
 
 URxvt.perl-ext-common:	default,clipboard,matcher,resize-font
 URxvt.keysym.Shift-Control-V: perl:clipboard:paste

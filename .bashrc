@@ -16,10 +16,11 @@ alias p="sudo pacman"
 alias aur="pacaur"
 alias sn="sudo shutdown now"
 alias rst="sudo reboot"
+alias lock="i3lock-fancy"
 alias starwars="telnet towel.blinkenlights.nl"
 alias nf="clear && neofetch"
 alias newnet="sudo systemctl restart NetworkManager"
-alias tn="ping 8.8.8.8"
+alias testnet="ping 8.8.8.8"
 
 #Check the weather:
 weath() { curl wttr.in/$1 ;}

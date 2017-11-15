@@ -48,3 +48,4 @@ cuetools
 shntool
 mpv
 xf86-video-nouveau
+compton

@@ -12,3 +12,4 @@ urxvt-resize-font-git
 cli-visualizer
 unclutter-xfixes-git
 ttf-font-icons
+i3lock-fancy-git
