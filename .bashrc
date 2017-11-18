@@ -9,7 +9,6 @@ alias ka="killall"
 alias sv="sudo vim"
 alias r="ranger"
 alias ls='ls -hN --color=auto --group-directories-first'
-alias g="git"
 alias gitup="git push origin master"
 alias mkdir="mkdir -pv"
 alias p="sudo pacman"
@@ -21,22 +20,30 @@ alias starwars="telnet towel.blinkenlights.nl"
 alias nf="clear && neofetch"
 alias newnet="sudo systemctl restart NetworkManager"
 alias testnet="ping 8.8.8.8"
+alias mountphone="~/.scripts/mount_phone.sh"
+alias unmountphone="~/.scripts/unmount_phone.sh"
 
 #Check the weather:
 weath() { curl wttr.in/$1 ;}
 
 #Directory Shortcuts:
-alias h="cd ~ && ls -a"
-alias d="cd ~/downloads && ls -a"
-alias pics="cd ~/pictures && ls -a"
-alias m="cd ~/music && ls -a"
-alias s="cd ~/.scripts && ls -a"
-alias c="cd ~/.config && ls -a"
-alias C="cd ~/code && ls -a"
+alias gh="cd ~ && ls -a"
+alias gd="cd ~/downloads && ls -a"
+alias gp="cd ~/pictures && ls -a"
+alias gm="cd ~/music && ls -a"
+alias gs="cd ~/.scripts && ls -a"
+alias gc="cd ~/.config && ls -a"
+alias gC="cd ~/code && ls -a"
+alias gr="cd / && ls -a"
 
-alias i3conf="vim ~/.config/i3/config"
-alias vimrc="vim ~/.vimrc"
-alias rangerrc="vim ~/.config/ranger/rc.conf"
+#rc files
+alias i3rc="vim ~/.config/i3/config"
+alias vrc="vim ~/.vimrc"
+alias rrc="vim ~/.config/ranger/rc.conf"
+alias rtrc="vim ~/.rtorrent.rc"
+alias brc="vim ~/.bashrc"
+alias xrc="vim ~/.Xdefaults"
+
 export EDITOR='vim'
 export VISUAL='vim'
 alias pastepic="xclip -selection clipboard -t image/png -o > pic.png"
