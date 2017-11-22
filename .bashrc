@@ -19,9 +19,11 @@ alias lock="i3lock-fancy"
 alias starwars="telnet towel.blinkenlights.nl"
 alias nf="clear && neofetch"
 alias newnet="sudo systemctl restart NetworkManager"
-alias testnet="ping 8.8.8.8"
+alias testnet="curl -I http://google.com/"
 alias mountphone="~/.scripts/mount_phone.sh"
 alias unmountphone="~/.scripts/unmount_phone.sh"
+alias openprivate="~/.scripts/activate_private.sh"
+alias closeprivate="~/.scripts/unmount_private.sh"
 
 #Check the weather:
 weath() { curl wttr.in/$1 ;}
