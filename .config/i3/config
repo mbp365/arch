@@ -1,22 +1,11 @@
 #binds
 set $mute --no-startup-id pactl set-sink-mute 0 1
-set $term i3-sensible-terminal
+set $term urxvtc
 set $mod Mod1
 set $music ncmpcpp
 set $browser firefox-nightly
 
-# Font for window titles. Will also be used by the bar unless a different font
-# is used in the bar {} block below.
-# This font is widely installed, provides lots of unicode glyphs, right-to-left
-# text rendering and scalability on retina/hidpi displays (thanks to pango).
 font pango:mono 9
-
-# Before i3 v4.8, we used to recommend this one as the default:
-# font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
-# The font above is very space-efficient, that is, it looks good, sharp and
-# clear in small sizes. However, its unicode glyph coverage is limited, the old
-# X core fonts rendering does not support right-to-left and this being a bitmap
-# font, it doesn’t scale on retina/hidpi displays.
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -78,7 +67,6 @@ bindsym $mod+space focus mode_toggle
 
 # focus the parent container
 bindsym $mod+a focus parent
-
 
 # switch to workspace
 bindsym $mod+1 workspace 1
@@ -147,7 +135,7 @@ bar {
         inactive_workspace $fg $bg $fg
         urgent_workspace   $col3 $bg $fg
     }
-	status_command bumblebee-status -m mpd pacman caffeine cpu memory pasink battery date time -p root.path=/ memory.format="{used}" root.format="{used}" spacer.text="|" time.format="%H:%M " date.format="%a, %b %d" -t wal
+	status_command bumblebee-status -m mpd sensors pacman caffeine cpu memory pasink battery date time -p root.path=/ memory.format="{used}" root.format="{used}" spacer.text="|" time.format="%H:%M " date.format="%a, %b %d" -t wal
 }
 
 
@@ -182,7 +170,7 @@ bindsym $mod+Shift+m exec ~/.scripts/save_song_name.sh
 bindsym $mod+w exec $term -e wicd-curses
 bindsym $mod+n exec $term -e ranger
 bindsym $mod+Shift+n exec $term -geometry 80x23 -name "floating_urxvt" -e ranger
-bindsym $mod+Shift+t exec --no-startup-id urxvt -geometry 80x23 -name "floating_urxvt"
+bindsym $mod+Shift+t exec --no-startup-id $term -geometry 80x23 -name "floating_urxvt"
 for_window [class="URxvt" instance="floating_urxvt$"] floating enable
 bindsym $mod+z gaps inner current set 0; gaps outer current set 0
 bindsym $mod+Shift+z gaps inner current set 10; gaps outer current set 10
@@ -193,7 +181,7 @@ bindsym $mod+Shift+u exec --no-startup-id transset-df --toggle 0.5 -a
 #hide everything bind:
 bindsym $mod+Delete exec feh --randomize --bg-fill ~/pictures/wallpapers
 bindsym $mod+Shift+Delete exec $mute ; workspace lmao ; exec $term -e htop ; exec $term -e ranger
-#cmus controls
+#music controls
 bindsym $mod+Pause exec --no-startup-id mpc toggle
 bindsym $mod+Right exec --no-startup-id mpc next
 bindsym $mod+Left exec --no-startup-id mpc prev
@@ -201,6 +189,7 @@ bindsym $mod+Shift+minus exec --no-startup-id mpc seek -20
 bindsym $mod+Shift+plus exec --no-startup-id mpc seek +20
 bindsym $mod+minus exec --no-startup-id mpc seek -10
 bindsym $mod+plus exec --no-startup-id mpc seek +10
+bindsym $mod+Up exec --no-startup-id mpc seek 0
 #print screens
 bindsym Print exec "scrot -e 'xclip -se c -t image/png ~/$f;rm ~/$f'"
 bindsym --release Shift+Print exec "scrot -s -e 'xclip -se c -t image/png ~/$f;rm ~/$f'"
@@ -222,6 +211,7 @@ for_window [window_role="pop-up"] floating enable
 exec --no-startup-id $browser
 exec --no-startup-id discord
 exec --no-startup-id mpd
+exec --no-startup-id "sleep 2;mpc pause"
 
 #notification
 exec --no-startup-id dunst
@@ -231,6 +221,9 @@ exec --no-startup-id unclutter
 
 #composting manager
 exec --no-startup-id compton --xrender-sync --xrender-sync-fence
+
+#urxvt daemon
+exec --no-startup-id urxvtd --quiet --opendisplay --fork
 
 #caps lock to esc
 exec_always --no-startup-id setxkbmap -layout us -variant altgr-intl -option caps:escape

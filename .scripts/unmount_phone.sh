@@ -1,2 +1,2 @@
 fusermount -u ~/phone
-rm -r ~/phone
+rmdir ~/phone
