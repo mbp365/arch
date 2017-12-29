@@ -1,4 +1,4 @@
 if [ -d "/home/max/phone" ]; then
-    fusermount -u ~/phone
+    fusermount -uz ~/phone
     rmdir ~/phone
 fi

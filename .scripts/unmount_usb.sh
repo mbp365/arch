@@ -1,4 +1,4 @@
 if [ -d "/home/max/usb" ]; then
-    umount ~/usb
+    sudo umount -l ~/usb
     rmdir ~/usb
 fi
