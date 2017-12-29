@@ -1,5 +1,8 @@
 stty -ixon
 
+#vi mode
+set -o vi
+
 export TERM=rxvt-256color
 export PS1="\[$(tput bold)\]\[$(tput setaf 1)\][\[$(tput setaf 3)\]\u\[$(tput setaf 2)\]@\[$(tput setaf 4)\]\h \[$(tput setaf 5)\]\W\[$(tput setaf 1)\]]\[$(tput setaf 7)\]\\$ \[$(tput sgr0)\]"
 
@@ -16,14 +19,18 @@ alias aur="pacaur"
 alias sn="sudo shutdown now"
 alias rst="sudo reboot"
 alias lock="i3lock-fancy"
+alias suspend="i3lock-fancy && systemctl suspend"
 alias starwars="telnet towel.blinkenlights.nl"
 alias nf="clear && neofetch"
 alias newnet="sudo systemctl restart NetworkManager"
 alias testnet="curl -I http://google.com/"
+alias mountusb="~/.scripts/mount_usb.sh"
+alias unmountusb="~/.scripts/unmount_usb.sh"
 alias mountphone="~/.scripts/mount_phone.sh"
 alias unmountphone="~/.scripts/unmount_phone.sh"
-alias openprivate="~/.scripts/activate_private.sh"
-alias closeprivate="~/.scripts/unmount_private.sh"
+alias mountprivate="~/.scripts/activate_private.sh"
+alias unmountprivate="~/.scripts/unmount_private.sh"
+alias mounted="mount | column -t"
 
 #Check the weather:
 weath() { curl wttr.in/$1 ;}
