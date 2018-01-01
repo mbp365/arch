@@ -12,3 +12,4 @@ cp -v .Xdefaults ~/
 cp -v .bashrc ~/
 cp -v .vimrc ~/
 sudo cp -v xorg.conf /etc/X11/xorg.conf
+sudo pip install -r python_deps.txt
