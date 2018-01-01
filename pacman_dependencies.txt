@@ -12,6 +12,7 @@ wavpack
 opusfile
 libpulse
 gimp
+i3-gaps
 youtube-dl
 scrot
 pavucontrol
@@ -24,14 +25,12 @@ atool
 libcaca
 feh
 unzip
-lxappearance
 unrar
 openssh
 mpd
 ncmpcpp
 ntfs-3g
 dosfstools
-yaourt
 xclip
 rtorrent
 xorg-xinit
@@ -50,3 +49,11 @@ mpv
 xf86-video-nouveau
 compton
 libmtp
+firefox
+python-pip
+gparted
+encfs
+mupdf
+otf-font-awesome
+htop
+urxvt-perls

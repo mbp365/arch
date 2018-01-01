@@ -1,12 +1,10 @@
 neofetch
 python-pywal
-i3-gaps
 bumblebee-status
 ttf-font-awesome
 pycharm-community
 discord
 slim
-firefox-nightly
 split2flac
 urxvt-resize-font-git
 cli-visualizer
@@ -14,3 +12,4 @@ unclutter-xfixes-git
 ttf-font-icons
 i3lock-fancy-git
 jmtpfs
+cava
