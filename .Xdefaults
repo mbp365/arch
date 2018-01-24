@@ -1,14 +1,14 @@
 URxvt.intensityStyles:	false
 URxvt.depth:		32
-URxvt.font: xft:Inconsolata For Powerline:size=12
+URxvt.font: xft:Inconsolata:size=12
 URxvt.scrollBar:	false
 URxvt.cursorColor:	white
 URxvt.letterSpace:0
 
-URxvt.perl-ext-common:	default,clipboard,matcher,resize-font
-URxvt.keysym.Shift-Control-V: perl:clipboard:paste
+URxvt.perl-ext-common:	default,clipboard,matcher,resize-font,selection-to-clipboard
+URxvt.keysym.C-V: perl:clipboard:paste
 URxvt.iso14755: False
-URxvt.url-launcher:	/usr/bin/firefox-nightly
+URxvt.url-launcher:	/usr/bin/firefox
 URxvt.keysym.Control-l: perl:matcher:last
 URxvt.matcher.button: 1
 URxvt.resize-font.smaller: C-Down

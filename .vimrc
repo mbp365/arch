@@ -31,7 +31,6 @@ call plug#begin(expand('~/.vim/plugged'))
 "*****************************************************************************
 "" Plug install packages
 "*****************************************************************************
-Plug 'LaTeX-Box-Team/LaTeX-Box'
 Plug 'dylanaraps/wal.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'jistr/vim-nerdtree-tabs'
@@ -541,3 +540,7 @@ nnoremap <C-v> :r !xclip -o -sel -c<CR><CR>
 nnoremap x "_dl
 nnoremap X "_dh
 nnoremap U <C-r>
+let g:instant_markdown_autostart = 0
+"MARKDOWN
+let g:vimwiki_ext2syntax = {'.Rmd': 'markdown', '.rmd': 'markdown','.md': 'markdown', '.markdown': 'markdown', '.mdown': 'markdown'}	"Interpret .md files, etc. as .markdown
+autocmd Filetype rmd map <F5> :!echo<space>"require(rmarkdown);<space>render('<c-r>%')"<space>\|<space>R<space>--vanilla<enter>

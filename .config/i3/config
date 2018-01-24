@@ -3,7 +3,7 @@ set $mute --no-startup-id pactl set-sink-mute 0 1
 set $term urxvtc
 set $mod Mod1
 set $music ncmpcpp
-set $browser firefox-nightly
+set $browser firefox
 
 font pango:mono 9
 
@@ -135,7 +135,7 @@ bar {
         inactive_workspace $fg $bg $fg
         urgent_workspace   $col3 $bg $fg
     }
-	status_command bumblebee-status -m mpd sensors pacman caffeine cpu memory pasink battery date time -p root.path=/ memory.format="{used}" root.format="{used}" spacer.text="|" time.format="%H:%M " date.format="%a, %b %d" -t wal
+	status_command bumblebee-status -m mpd pacman caffeine cpu pasink battery date time -p root.path=/ memory.format="{used}" root.format="{used}" spacer.text="|" time.format="%H:%M " date.format="%a, %b %d" -t wal
 }
 
 
@@ -178,6 +178,7 @@ bindsym $mod+y gaps inner current plus 5
 bindsym $mod+Shift+y gaps inner current minus 5
 bindsym $mod+u exec --no-startup-id ~/.scripts/flash_win.sh
 bindsym $mod+Shift+u exec --no-startup-id transset-df --toggle 0.5 -a
+bindsym $mod+F1 exec --no-startup-id i3lock-fancy
 #hide everything bind:
 bindsym $mod+Delete exec feh --randomize --bg-fill ~/pictures/wallpapers
 bindsym $mod+Shift+Delete exec $mute ; workspace lmao ; exec $term -e htop ; exec $term -e ranger
@@ -194,8 +195,8 @@ bindsym $mod+Up exec --no-startup-id mpc seek 0
 bindsym Print exec "scrot -e 'xclip -se c -t image/png ~/$f;rm ~/$f'"
 bindsym --release Shift+Print exec "scrot -s -e 'xclip -se c -t image/png ~/$f;rm ~/$f'"
 #screen record
-bindsym F8 exec "~/.scripts/screencap.sh & notify-send recording started"
-bindsym $mod+F8 exec "killall ffmpeg & notify-send recording ended"
+bindsym $mod+F8 exec "~/.scripts/screencap.sh & notify-send recording started"
+bindsym $mod+Shift+F8 exec "killall ffmpeg & notify-send recording ended"
 
 #app places
 assign [class="discord"] → 4
@@ -211,7 +212,6 @@ for_window [window_role="pop-up"] floating enable
 exec --no-startup-id $browser
 exec --no-startup-id discord
 exec --no-startup-id mpd
-exec --no-startup-id "sleep 2;mpc pause"
 
 #notification
 exec --no-startup-id dunst
@@ -220,7 +220,7 @@ exec --no-startup-id dunst
 exec --no-startup-id unclutter
 
 #composting manager
-exec --no-startup-id compton --xrender-sync --xrender-sync-fence
+#exec --no-startup-id compton --xrender-sync --xrender-sync-fence
 
 #urxvt daemon
 exec --no-startup-id urxvtd --quiet --opendisplay --fork

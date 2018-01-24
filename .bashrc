@@ -4,6 +4,7 @@ stty -ixon
 set -o vi
 
 export TERM=rxvt-256color
+
 export PS1="\[$(tput bold)\]\[$(tput setaf 1)\][\[$(tput setaf 3)\]\u\[$(tput setaf 2)\]@\[$(tput setaf 4)\]\h \[$(tput setaf 5)\]\W\[$(tput setaf 1)\]]\[$(tput setaf 7)\]\\$ \[$(tput sgr0)\]"
 
 #Some aliases
@@ -56,3 +57,8 @@ alias xrc="vim ~/.Xdefaults"
 export EDITOR='vim'
 export VISUAL='vim'
 alias pastepic="xclip -selection clipboard -t image/png -o > pic.png"
+alias addkey="gpg --recv-keys"
+alias copy="xclip -selection clipboard"
+
+transfer() { if [ $# -eq 0 ]; then echo -e "No arguments specified. Usage:\necho transfer /tmp/test.md\ncat /tmp/test.md | transfer test.md"; return 1; fi
+tmpfile=$( mktemp -t transferXXX ); if tty -s; then basefile=$(basename "$1" | sed -e 's/[^a-zA-Z0-9._-]/-/g'); curl --progress-bar --upload-file "$1" "https://transfer.sh/$basefile" >> $tmpfile; else curl --progress-bar --upload-file "-" "https://transfer.sh/$1" >> $tmpfile ; fi; cat $tmpfile; rm -f $tmpfile; }
