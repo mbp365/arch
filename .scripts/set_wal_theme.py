@@ -35,4 +35,4 @@ with open('/usr/share/bumblebee-status/themes/wal.json', 'w') as outfile:
 with open('/home/max/.config/cava/config_template', 'r') as myfile:
     text_data = myfile.read()
 with open('/home/max/.config/cava/config', 'w') as myfile:
-    myfile.write(text_data.format(data["colors"]["color1"],data["colors"]["color3"]))
+    myfile.write(text_data.format(data["colors"]["color0"],data["colors"]["color1"]))

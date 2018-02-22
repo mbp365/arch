@@ -100,12 +100,6 @@ bindsym $mod+Shift+r restart
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
-        # These bindings trigger as soon as you enter the resize mode
-
-        # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
         bindsym h resize shrink width 5 px or 5 ppt
         bindsym j resize grow height 5 px or 5 ppt
         bindsym k resize shrink height 5 px or 5 ppt
@@ -125,6 +119,7 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 bar {
+    tray_output none
 	position top
     colors {
         background $bg
@@ -141,7 +136,8 @@ bar {
 
 bindsym $mod+q bar mode toggle
 #no border
-for_window [class="^.*"] border pixel 0
+for_window [class="^.*"] border pixel 3
+for_window [class="URxvt" instance="music"] border pixel 0
 
 # Pulse Audio controls
 bindsym $mod+F12 exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +3% #increase sound volume
@@ -192,7 +188,7 @@ bindsym $mod+minus exec --no-startup-id mpc seek -10
 bindsym $mod+plus exec --no-startup-id mpc seek +10
 bindsym $mod+Up exec --no-startup-id mpc seek 0
 #print screens
-bindsym Print exec "scrot -e 'xclip -se c -t image/png ~/$f;rm ~/$f'"
+bindsym Print exec "scrot -u -e 'xclip -se c -t image/png ~/$f;rm ~/$f'"
 bindsym --release Shift+Print exec "scrot -s -e 'xclip -se c -t image/png ~/$f;rm ~/$f'"
 #screen record
 bindsym $mod+F8 exec "~/.scripts/screencap.sh & notify-send recording started"
@@ -210,7 +206,6 @@ for_window [window_role="pop-up"] floating enable
 
 #startup
 exec --no-startup-id $browser
-exec --no-startup-id discord
 exec --no-startup-id mpd
 
 #notification
