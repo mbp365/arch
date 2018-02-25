@@ -550,4 +550,4 @@ autocmd Filetype rmd map <F5> :!echo<space>"require(rmarkdown);<space>render('<c
 
 "spellcheck
 set spelllang=en
-set spellfile=$HOME/Dropbox/vim/spell/en.utf-8.add
+set spellfile=$HOME/.config/vim/spellcheckwords.add
