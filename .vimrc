@@ -31,6 +31,8 @@ call plug#begin(expand('~/.vim/plugged'))
 "*****************************************************************************
 "" Plug install packages
 "*****************************************************************************
+Plug 'vim-pandoc/vim-pandoc'
+Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'dylanaraps/wal.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'jistr/vim-nerdtree-tabs'
@@ -541,6 +543,11 @@ nnoremap x "_dl
 nnoremap X "_dh
 nnoremap U <C-r>
 let g:instant_markdown_autostart = 0
+
 "MARKDOWN
 let g:vimwiki_ext2syntax = {'.Rmd': 'markdown', '.rmd': 'markdown','.md': 'markdown', '.markdown': 'markdown', '.mdown': 'markdown'}	"Interpret .md files, etc. as .markdown
 autocmd Filetype rmd map <F5> :!echo<space>"require(rmarkdown);<space>render('<c-r>%')"<space>\|<space>R<space>--vanilla<enter>
+
+"spellcheck
+set spelllang=en
+set spellfile=$HOME/Dropbox/vim/spell/en.utf-8.add
