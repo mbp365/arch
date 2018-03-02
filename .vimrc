@@ -31,6 +31,7 @@ call plug#begin(expand('~/.vim/plugged'))
 "*****************************************************************************
 "" Plug install packages
 "*****************************************************************************
+Plug 'vim-scripts/vim-auto-save'
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'dylanaraps/wal.vim'
@@ -551,3 +552,6 @@ autocmd Filetype rmd map <F5> :!echo<space>"require(rmarkdown);<space>render('<c
 "spellcheck
 set spelllang=en
 set spellfile=$HOME/.config/vim/spellcheckwords.add
+
+"autosave
+let g:auto_save = 1
