@@ -190,6 +190,7 @@ bindsym $mod+Up exec --no-startup-id mpc seek 0
 #print screens
 bindsym Print exec "scrot -u -e 'xclip -se c -t image/png ~/$f;rm ~/$f'"
 bindsym --release Shift+Print exec "scrot -s -e 'xclip -se c -t image/png ~/$f;rm ~/$f'"
+bindsym F12 exec "scrot -u"
 #screen record
 bindsym $mod+F8 exec "~/.scripts/screencap.sh & notify-send recording started"
 bindsym $mod+Shift+F8 exec "killall ffmpeg & notify-send recording ended"
