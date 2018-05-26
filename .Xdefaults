@@ -5,11 +5,12 @@ URxvt.scrollBar:	false
 URxvt.cursorColor:	white
 URxvt.letterSpace:0
 
-URxvt.perl-ext-common:	default,clipboard,matcher,resize-font,selection-to-clipboard
+URxvt.perl-ext-common: default,clipboard,resize-font,selection-to-clipboard,url-select,font-size
 URxvt.keysym.C-V: perl:clipboard:paste
 URxvt.iso14755: False
 URxvt.url-launcher:	/usr/bin/firefox
-URxvt.keysym.Control-l: perl:matcher:last
-URxvt.matcher.button: 1
-URxvt.resize-font.smaller: C-Down
-URxvt.resize-font.bigger: C-Up
+! url-select. We can middle-click on any url and this will launch the browser
+! defined by `URxvt.url-select.launcher`.
+URxvt.keysym.Control-l: perl:url-select:select_next
+URxvt.url-select.underline: true
+URxvt.url-select.launcher: firefox

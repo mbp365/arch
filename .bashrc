@@ -32,6 +32,7 @@ alias unmountphone="~/.scripts/unmount_phone.sh"
 alias mountprivate="~/.scripts/activate_private.sh"
 alias unmountprivate="~/.scripts/unmount_private.sh"
 alias mounted="mount | column -t"
+alias gsd="sudo ~/.scripts/get-shit-done/get-shit-done.sh"
 
 #Check the weather:
 weath() { curl wttr.in/$1 ;}
