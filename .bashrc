@@ -54,6 +54,7 @@ alias rrc="vim ~/.config/ranger/rc.conf"
 alias rtrc="vim ~/.rtorrent.rc"
 alias brc="vim ~/.bashrc"
 alias xrc="vim ~/.Xdefaults"
+alias nrc="vim ~/.newsboat/urls"
 
 export EDITOR='vim'
 export VISUAL='vim'

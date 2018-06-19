@@ -176,6 +176,8 @@ bindsym $mod+Shift+y gaps inner current minus 5
 bindsym $mod+u exec --no-startup-id ~/.scripts/flash_win.sh
 bindsym $mod+Shift+u exec --no-startup-id transset-df --toggle 0.5 -a
 bindsym $mod+F1 exec --no-startup-id "i3lock-fancy && systemctl suspend"
+bindsym $mod+F2 exec --no-startup-id "nmcli radio wifi off"
+bindsym $mod+Shift+F2 exec --no-startup-id "nmcli radio wifi on"
 #hide everything bind:
 bindsym $mod+Delete exec feh --randomize --bg-fill ~/pictures/wallpapers
 bindsym $mod+Shift+Delete exec $mute ; workspace lmao ; exec $term -e htop ; exec $term -e ranger
