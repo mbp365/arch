@@ -129,7 +129,7 @@ bar {
         inactive_workspace $fg $bg $fg
         urgent_workspace   $col3 $bg $fg
     }
-	status_command bumblebee-status -m mpd pacman caffeine memory pasink battery date time -p root.path=/ memory.format="{used}" root.format="{used}" spacer.text="|" time.format="%H:%M " date.format="%a, %b %d" -t wal
+	status_command bumblebee-status -m pacman caffeine memory pasink battery date time -p root.path=/ memory.format="{used}" root.format="{used}" spacer.text="|" time.format="%H:%M " date.format="%a, %b %d" -t wal
 }
 
 

@@ -57,3 +57,5 @@ mupdf
 otf-font-awesome
 htop
 urxvt-perls
+pacman-contrib
+pacman-mirrorlist
