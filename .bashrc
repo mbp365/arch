@@ -46,6 +46,8 @@ alias gsd="sudo ~/.scripts/get-shit-done/get-shit-done.sh"
 alias pastepic="xclip -selection clipboard -t image/png -o > pic.png"
 alias copy="xclip -selection clipboard"
 alias turnoffmonitor="xrandr --output eDP-1 --off"
+alias hidegit="mv .git .git_"
+alias unhidegit="mv .git_ .git"
 
 #Mounting
 alias mountusb="~/.scripts/mount_usb.sh"
