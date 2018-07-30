@@ -16,12 +16,10 @@ col4=$(tput setaf 4)
 col5=$(tput setaf 5)
 col6=$(tput setaf 6)
 
-parse_git_branch() {
-     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
-}
+source ~/.scripts/git-prompt.sh
 
 export TERM=rxvt-256color
-export PS1="\[$bold\]\\[$col2\]\u \[$col6\]\w$(parse_git_branch) \[$col4\]> \[$reset\]"
+export PS1='\[$bold\]\[$col2\]\u \[$col6\]\w$(__git_ps1 " (%s)") \[$col4\]> \[$reset\]'
 
 #Some aliases
 alias v="vim"
