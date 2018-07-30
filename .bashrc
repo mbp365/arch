@@ -45,6 +45,7 @@ alias mounted="mount | column -t"
 alias gsd="sudo ~/.scripts/get-shit-done/get-shit-done.sh"
 alias pastepic="xclip -selection clipboard -t image/png -o > pic.png"
 alias copy="xclip -selection clipboard"
+alias turnoffmonitor="xrandr --output eDP-1 --off"
 
 #Mounting
 alias mountusb="~/.scripts/mount_usb.sh"
@@ -69,15 +70,18 @@ alias Gr="cd / && ls -a"
 
 #Git Shortcuts:
 alias gs="git status"
-alias gch="git checkout"
-alias gp="git pull"
+alias gchk="git checkout"
+alias gpull="git pull"
+alias gpush="git pull"
 alias gf="git fetch"
 alias gl="git log"
-alias gc="git commit"
+alias gcm="git commit"
 alias gr="git rebase"
 alias gm="git merge"
 alias grm="git rm"
 alias ga="git add"
+alias gb="git branch"
+alias gitdeletebranch="git push origin --delete"
 
 #rc files
 alias i3rc="vim ~/.config/i3/config"
