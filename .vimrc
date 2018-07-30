@@ -545,6 +545,10 @@ nnoremap X "_dh
 nnoremap U <C-r>
 let g:instant_markdown_autostart = 0
 
+"newlines
+nmap <CR> o<Esc>
+
+
 "MARKDOWN
 let g:vimwiki_ext2syntax = {'.Rmd': 'markdown', '.rmd': 'markdown','.md': 'markdown', '.markdown': 'markdown', '.mdown': 'markdown'}	"Interpret .md files, etc. as .markdown
 autocmd Filetype rmd map <F5> :!echo<space>"require(rmarkdown);<space>render('<c-r>%')"<space>\|<space>R<space>--vanilla<enter>
@@ -557,3 +561,7 @@ set spellfile=$HOME/.config/vim/spellcheckwords.add
 let g:auto_save = 1
 let g:auto_save_in_insert_mode = 0
 let g:auto_save_silent = 1
+"next tab
+nnoremap K :bnext<CR>
+nnoremap J :bprevious<CR>
+
