@@ -1,4 +1,4 @@
-python -m pywal -i $1
+python3 -m pywal -i $1
 #resizes the picture to the screen resolution
 #and moves it to the slim theme folder (hardcoded)
 sudo -s source ~/.cache/wal/colors.sh

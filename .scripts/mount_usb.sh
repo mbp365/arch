@@ -1,4 +1,5 @@
 if [ ! -d "/home/max/usb" ]; then
     mkdir ~/usb
-    sudo mount /dev/sdb1 ~/usb
+    DEVICE=${1:-/dev/sdb1}
+    sudo mount "$DEVICE" ~/usb
 fi
