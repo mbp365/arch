@@ -83,6 +83,25 @@ alias grm="git rm"
 alias ga="git add"
 alias gb="git branch"
 alias gitdeletebranch="git push origin --delete"
+alias gitdeletelocalbranch="git fetch -p && for branch in `git branch -vv | grep ': gone]' | awk '{print $1}'`; do git branch -D $branch; done"
+
+# Git branch bash completion
+if [ -f ~/.scripts/git-completion.bash ]; then
+    . ~/.scripts/git-completion.bash
+    # Add git completion to aliases
+    __git_complete gchk _git_checkout
+    __git_complete gpull _git_pull
+    __git_complete gpush _git_push
+    __git_complete gf _git_fetch
+    __git_complete gl _git_log
+    __git_complete gcm _git_commit
+    __git_complete gr _git_rebase
+    __git_complete gm _git_merge
+    __git_complete grm _git_rm
+    __git_complete ga _git_add
+    __git_complete gb _git_branch
+    __git_complete gitdeletebranch _git_checkout
+fi
 
 #rc files
 alias i3rc="vim ~/.config/i3/config"
@@ -99,7 +118,6 @@ export VISUAL='vim'
 alias addkey="gpg --recv-keys"
 
 
-test -f ~/.scripts/git-completion.bash && . $_
 
 transfer() { if [ $# -eq 0 ]; then echo -e "No arguments specified. Usage:\necho transfer /tmp/test.md\ncat /tmp/test.md | transfer test.md"; return 1; fi
 tmpfile=$( mktemp -t transferXXX ); if tty -s; then basefile=$(basename "$1" | sed -e 's/[^a-zA-Z0-9._-]/-/g'); curl --progress-bar --upload-file "$1" "https://transfer.sh/$basefile" >> $tmpfile; else curl --progress-bar --upload-file "-" "https://transfer.sh/$1" >> $tmpfile ; fi; cat $tmpfile; rm -f $tmpfile; }
