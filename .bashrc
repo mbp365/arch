@@ -75,15 +75,17 @@ alias gchk="git checkout"
 alias gpull="git pull"
 alias gpush="git push"
 alias gf="git fetch"
-alias gl="git log"
+alias gl="git log --pretty=short"
 alias gcm="git commit"
 alias gr="git rebase"
 alias gm="git merge"
 alias grm="git rm"
 alias ga="git add"
 alias gb="git branch"
+alias gd="git diff"
+alias gstash="git stash"
 alias gitdeletebranch="git push origin --delete"
-alias gitdeletelocalbranch="git fetch -p && for branch in `git branch -vv | grep ': gone]' | awk '{print $1}'`; do git branch -D $branch; done"
+alias gitdeletelocalbranches="git fetch -p && for branch in \`git branch -vv | grep \': gone]\' | awk \'{print $1}\'\`; do git branch -D $branch; done"
 
 # Git branch bash completion
 if [ -f ~/.scripts/git-completion.bash ]; then
@@ -100,7 +102,9 @@ if [ -f ~/.scripts/git-completion.bash ]; then
     __git_complete grm _git_rm
     __git_complete ga _git_add
     __git_complete gb _git_branch
-    __git_complete gitdeletebranch _git_checkout
+    __git_complete gd _git_diff
+    __git_complete gstash _git_stash
+    __git_complete gitdeletebranch _git_branch
 fi
 
 #rc files
@@ -116,8 +120,6 @@ alias mrc="vim ~/.config/mpv/mpv.conf"
 export EDITOR='vim'
 export VISUAL='vim'
 alias addkey="gpg --recv-keys"
-
-
 
 transfer() { if [ $# -eq 0 ]; then echo -e "No arguments specified. Usage:\necho transfer /tmp/test.md\ncat /tmp/test.md | transfer test.md"; return 1; fi
 tmpfile=$( mktemp -t transferXXX ); if tty -s; then basefile=$(basename "$1" | sed -e 's/[^a-zA-Z0-9._-]/-/g'); curl --progress-bar --upload-file "$1" "https://transfer.sh/$basefile" >> $tmpfile; else curl --progress-bar --upload-file "-" "https://transfer.sh/$1" >> $tmpfile ; fi; cat $tmpfile; rm -f $tmpfile; }
