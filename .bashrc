@@ -14,10 +14,11 @@ col4=$(tput setaf 4)
 col5=$(tput setaf 5)
 col6=$(tput setaf 6)
 
+source ~/.scripts/virtualenv-auto-activate.sh
 source ~/.scripts/git-prompt.sh
 
 export TERM=rxvt-256color
-export PS1='\[$bold\]\[$col2\]\u \[$col6\]\w$(__git_ps1 " (%s)") \[$col4\]> \[$reset\]'
+export PS1='\[$bold\]\[$col2\]\u \[$col6\]\w\[$col5\]$(__git_ps1 " (%s)")\[$col4\]$_VENV_NAME \[$col3\]> \[$reset\]'
 
 #Some aliases
 alias v="vim"
