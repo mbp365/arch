@@ -3,8 +3,6 @@ stty -ixon
 #vi mode
 set -o vi
 
-PATH="$PATH:/home/max/.gem/ruby/2.5.0/bin"
-
 # color names for readibility
 reset=$(tput sgr0)
 bold=$(tput bold)
@@ -54,6 +52,13 @@ alias mountphone="~/.scripts/mount_phone.sh"
 alias unmountphone="~/.scripts/unmount_phone.sh"
 alias mountprivate="~/.scripts/activate_private.sh"
 alias unmountprivate="~/.scripts/unmount_private.sh"
+
+# Synchronised history
+export HISTFILE="/home/max/.config/bash/.bash_history"
+export HISTCONTROL=ignoredups:erasedups
+shopt -s histappend
+
+export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 
 #Check the weather:
 weath() { curl wttr.in/$1 ;}
