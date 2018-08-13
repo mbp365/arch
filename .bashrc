@@ -14,11 +14,9 @@ col4=$(tput setaf 4)
 col5=$(tput setaf 5)
 col6=$(tput setaf 6)
 
-source ~/.scripts/virtualenv-auto-activate.sh
-source ~/.scripts/git-prompt.sh
-
 export TERM=rxvt-256color
-export PS1='\[$bold\]\[$col2\]\u \[$col6\]\w\[$col5\]$(__git_ps1 " (%s)")\[$col4\]$_VENV_NAME \[$col3\]> \[$reset\]'
+export EDITOR='vim'
+export VISUAL='vim'
 
 #Some aliases
 alias v="vim"
@@ -54,7 +52,7 @@ alias unmountphone="~/.scripts/unmount_phone.sh"
 alias mountprivate="~/.scripts/activate_private.sh"
 alias unmountprivate="~/.scripts/unmount_private.sh"
 
-# Synchronised history
+#Synchronised history
 export HISTFILE="/home/max/.config/bash/.bash_history"
 export HISTCONTROL=ignoredups:erasedups
 shopt -s histappend
@@ -93,7 +91,8 @@ alias gstash="git stash"
 alias gitdeletebranch="git push origin --delete"
 alias gitdeletelocalbranches="git fetch -p && for branch in \`git branch -vv | grep \': gone]\' | awk \'{print $1}\'\`; do git branch -D $branch; done"
 
-# Git branch bash completion
+#Git branch bash completion
+source ~/.scripts/git-prompt.sh
 if [ -f ~/.scripts/git-completion.bash ]; then
     . ~/.scripts/git-completion.bash
     # Add git completion to aliases
@@ -113,6 +112,17 @@ if [ -f ~/.scripts/git-completion.bash ]; then
     __git_complete gitdeletebranch _git_branch
 fi
 
+#python venv
+export VIRTUAL_ENV_DISABLE_PROMPT=1
+alias a="source ./.venv/bin/activate"
+alias da="deactivate"
+
+function getVenvName(){
+    if [[ -n "$VIRTUAL_ENV" ]]; then
+        echo " (venv)"
+    fi
+}
+
 #rc files
 alias i3rc="vim ~/.config/i3/config"
 alias vrc="vim ~/.vimrc"
@@ -123,9 +133,8 @@ alias xrc="vim ~/.Xdefaults"
 alias nrc="vim ~/.newsboat/urls"
 alias mrc="vim ~/.config/mpv/mpv.conf"
 
-export EDITOR='vim'
-export VISUAL='vim'
-alias addkey="gpg --recv-keys"
+#PS1
+export PS1='\[$bold\]\[$col2\]\u \[$col6\]\w\[$col5\]$(__git_ps1 " (%s)")\[$col4\]$(getVenvName) \[$col3\]> \[$reset\]'
 
 transfer() { if [ $# -eq 0 ]; then echo -e "No arguments specified. Usage:\necho transfer /tmp/test.md\ncat /tmp/test.md | transfer test.md"; return 1; fi
 tmpfile=$( mktemp -t transferXXX ); if tty -s; then basefile=$(basename "$1" | sed -e 's/[^a-zA-Z0-9._-]/-/g'); curl --progress-bar --upload-file "$1" "https://transfer.sh/$basefile" >> $tmpfile; else curl --progress-bar --upload-file "-" "https://transfer.sh/$1" >> $tmpfile ; fi; cat $tmpfile; rm -f $tmpfile; }
