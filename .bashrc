@@ -88,6 +88,7 @@ alias ga="git add"
 alias gb="git branch"
 alias gd="git diff"
 alias gstash="git stash"
+alias gcherry="git cherry-pick"
 alias gitdeletebranch="git push origin --delete"
 alias gitdeletelocalbranches="git fetch -p && for branch in \`git branch -vv | grep \': gone]\' | awk \'{print $1}\'\`; do git branch -D $branch; done"
 
