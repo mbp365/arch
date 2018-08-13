@@ -43,6 +43,7 @@ alias copy="xclip -selection clipboard"
 alias turnoffmonitor="xrandr --output eDP-1 --off"
 alias hidegit="mv .git .git_"
 alias unhidegit="mv .git_ .git"
+alias h="history"
 
 #Mounting
 alias mountusb="~/.scripts/mount_usb.sh"
@@ -54,10 +55,9 @@ alias unmountprivate="~/.scripts/unmount_private.sh"
 
 #Synchronised history
 export HISTFILE="/home/max/.config/bash/.bash_history"
-export HISTCONTROL=ignoredups:erasedups
+HISTCONTROL=ignoredups:erasedups
 shopt -s histappend
-
-export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
+PROMPT_COMMAND="history -n; history -w; history -c; history -r; $PROMPT_COMMAND"
 
 #Check the weather:
 weath() { curl wttr.in/$1 ;}
