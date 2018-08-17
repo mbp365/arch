@@ -63,7 +63,7 @@ alias gd="git diff"
 alias gstash="git stash"
 alias gcherry="git cherry-pick"
 alias gitdeletebranch="git push origin --delete"
-alias gitdeletelocalbranches="git branch -r | awk '{print $1}' | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk '{print $1}' | xargs git branch -d"
+alias gitdeletelocalbranches="git branch -r | awk '{print \$1}' | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk '{print \$1}' | xargs git branch -d"
 alias hidegit="mv .git .git_"
 alias unhidegit="mv .git_ .git"
 
