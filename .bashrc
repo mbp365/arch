@@ -1,3 +1,6 @@
+#load aliases
+source ~/.config/bash/bash_aliases.sh
+
 stty -ixon
 
 #vi mode
@@ -18,41 +21,6 @@ export TERM=rxvt-256color
 export EDITOR='vim'
 export VISUAL='vim'
 
-#Some aliases
-alias v="vim"
-alias ka="killall"
-alias sv="sudo vim"
-alias r="ranger"
-alias ls='ls -hN --color=auto --group-directories-first'
-alias gitup="git push origin master"
-alias mkdir="mkdir -pv"
-alias p="sudo pacman"
-alias aur="pacaur"
-alias sn="sudo shutdown now"
-alias rst="sudo reboot"
-alias lock="i3lock-fancy"
-alias suspend="i3lock-fancy && systemctl suspend"
-alias starwars="telnet towel.blinkenlights.nl"
-alias nf="clear && neofetch"
-alias newnet="sudo systemctl restart NetworkManager"
-alias testnet="curl -I http://google.com/"
-alias mounted="mount | column -t"
-alias gsd="sudo ~/.scripts/get-shit-done/get-shit-done.sh"
-alias pastepic="xclip -selection clipboard -t image/png -o > pic.png"
-alias copy="xclip -selection clipboard"
-alias turnoffmonitor="xrandr --output eDP-1 --off"
-alias hidegit="mv .git .git_"
-alias unhidegit="mv .git_ .git"
-alias h="history"
-
-#Mounting
-alias mountusb="~/.scripts/mount_usb.sh"
-alias unmountusb="~/.scripts/unmount_usb.sh"
-alias mountphone="~/.scripts/mount_phone.sh"
-alias unmountphone="~/.scripts/unmount_phone.sh"
-alias mountprivate="~/.scripts/activate_private.sh"
-alias unmountprivate="~/.scripts/unmount_private.sh"
-
 #Synchronised history
 export HISTFILE="/home/max/.config/bash/.bash_history"
 HISTCONTROL=ignoredups:erasedups
@@ -61,36 +29,6 @@ PROMPT_COMMAND="history -n; history -w; history -c; history -r; $PROMPT_COMMAND"
 
 #Check the weather:
 weath() { curl wttr.in/$1 ;}
-
-#Directory Shortcuts:
-alias Gh="cd ~ && ls -a"
-alias Gd="cd ~/downloads && ls -a"
-alias Gp="cd ~/pictures && ls -a"
-alias Gm="cd ~/music && ls -a"
-alias Gs="cd ~/.scripts && ls -a"
-alias Gc="cd ~/.config && ls -a"
-alias GC="cd ~/code && ls -a"
-alias Gr="cd / && ls -a"
-
-#Git Shortcuts:
-alias gs="git status"
-alias gsu="git status -uno"
-alias gchk="git checkout"
-alias gpull="git pull"
-alias gpush="git push"
-alias gf="git fetch"
-alias gl="git log --pretty=short"
-alias gcm="git commit"
-alias gr="git rebase"
-alias gm="git merge"
-alias grm="git rm"
-alias ga="git add"
-alias gb="git branch"
-alias gd="git diff"
-alias gstash="git stash"
-alias gcherry="git cherry-pick"
-alias gitdeletebranch="git push origin --delete"
-alias gitdeletelocalbranches="git fetch -p && for branch in \`git branch -vv | grep \': gone]\' | awk \'{print $1}\'\`; do git branch -D $branch; done"
 
 #Git branch bash completion
 source ~/.scripts/git-prompt.sh
@@ -115,24 +53,12 @@ fi
 
 #python venv
 export VIRTUAL_ENV_DISABLE_PROMPT=1
-alias a="source ./.venv/bin/activate"
-alias da="deactivate"
 
 function getVenvName(){
     if [[ -n "$VIRTUAL_ENV" ]]; then
         echo " (venv)"
     fi
 }
-
-#rc files
-alias i3rc="vim ~/.config/i3/config"
-alias vrc="vim ~/.vimrc"
-alias rrc="vim ~/.config/ranger/rc.conf"
-alias rtrc="vim ~/.rtorrent.rc"
-alias brc="vim ~/.bashrc"
-alias xrc="vim ~/.Xdefaults"
-alias nrc="vim ~/.newsboat/urls"
-alias mrc="vim ~/.config/mpv/mpv.conf"
 
 #PS1
 export PS1='\[$bold\]\[$col2\]\u \[$col6\]\w\[$col5\]$(__git_ps1 " (%s)")\[$col4\]$(getVenvName) \[$col3\]> \[$reset\]'
