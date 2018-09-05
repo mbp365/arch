@@ -62,8 +62,9 @@ alias gb="git branch"
 alias gd="git diff"
 alias gstash="git stash"
 alias gcherry="git cherry-pick"
-alias gitdeletebranch="git push origin --delete"
-alias gitdeletelocalbranches="git branch -r | awk '{print \$1}' | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk '{print \$1}' | xargs git branch -d"
+gcreatebranch() { git branch $1; git push --set-upstream origin $1; git checkout $1; }
+alias gdremotebranch="git push origin --delete"
+alias gdlocalbranches="git branch -r | awk '{print \$1}' | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk '{print \$1}' | xargs git branch -d"
 alias hidegit="mv .git .git_"
 alias unhidegit="mv .git_ .git"
 
