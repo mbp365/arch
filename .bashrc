@@ -37,20 +37,21 @@ if [ -f ~/.scripts/git-completion.bash ]; then
     . ~/.scripts/git-completion.bash
     # Add git completion to aliases
     __git_complete gchk _git_checkout
+    __git_complete gchkh _git_checkout
     __git_complete gs _git_status
-    __git_complete gsu _git_status
     __git_complete gpull _git_pull
     __git_complete gpush _git_push
     __git_complete gf _git_fetch
-    __git_complete gfp _git_fetch
-    __git_complete gls _git_log
+    __git_complete gfap _git_fetch
+    __git_complete gl _git_log
     __git_complete gcm _git_commit
     __git_complete gcma _git_commit
-    __git_complete gr _git_rebase
+    __git_complete grebase _git_rebase
+    __git_complete grevert _git_revert
+    __git_complete greset _git_reset
     __git_complete gm _git_merge
     __git_complete grm _git_rm
     __git_complete ga _git_add
-    __git_complete gai _git_add
     __git_complete gb _git_branch
     __git_complete gd _git_diff
     __git_complete gstash _git_stash
