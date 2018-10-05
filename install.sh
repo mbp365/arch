@@ -1,11 +1,20 @@
 #!/bin/sh
 
 sudo pacman -Syu
-sudo pacman -S $(<pacman_dependencies.txt) --needed --noconfirm
-#install pacaur
-sudo curl -s https://gist.githubusercontent.com/Tadly/0e65d30f279a34c33e9b/raw/pacaur_install.sh | bash
-pacaur -S $(<aur_dependencies.txt) --m-arg --skippgpcheck --needed --noconfirm
-cp -rv .config ~/
+
+sudo pacman -S archlinux-keyring
+sudo pacman-key --populate
+sudo pacman-key --refresh-keys
+sudo pacman -Syu
+
+sudo pacman --needed -S $(<pacman_dependencies.txt)
+
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
+
+yay --needed -S $(<aur_dependencies.txt)
+
 cp -rv .scripts ~/
 sudo cp -v override.conf /etc/systemd/system/getty@tty1.service.d/override.conf
 cp -v .Xdefaults ~/
