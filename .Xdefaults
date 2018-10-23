@@ -14,3 +14,6 @@ URxvt.url-launcher:	/usr/bin/firefox
 URxvt.keysym.Control-l: perl:url-select:select_next
 URxvt.url-select.underline: true
 URxvt.url-select.launcher: firefox
+
+URxvt.keysym.Control-Down: resize-font:smaller
+URxvt.keysym.Control-Up: resize-font:bigger
