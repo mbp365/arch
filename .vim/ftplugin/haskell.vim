@@ -4,6 +4,7 @@ set expandtab                   "Always uses spaces instead of tabs
 set softtabstop=4               "Insert 4 spaces when tab is pressed
 set shiftwidth=4                "An indent is 4 spaces
 set shiftround                  "Round indent to nearest shiftwidth multiple
+set colorcolumn=80              "Highlight the 80th column
 map <F9> :!ghci '%:p'<CR>
 
 
