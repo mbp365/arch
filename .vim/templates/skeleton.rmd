@@ -1,0 +1,12 @@
+---
+author: Max Kovalovs
+title: <<INSERT TITLE>>
+output: pdf_document
+header-includes:
+   - \usepackage{amssymb}
+   - \usepackage{amsmath}
+   - \usepackage{graphicx}
+   - \usepackage{amsthm}
+   - \usepackage{physics}
+   - \usepackage{mathtools}
+---
