@@ -21,8 +21,10 @@ if [ -f "$1" ] ; then
           *.zip) unzip ../"$1" ;;
           *.Z) uncompress ../"$1" ;;
           *.7z) 7z x ../"$1" ;;
+          *.iso) 7z x ../"$1" ;;
           *.xz) unxz ../"$1" ;;
           *.exe) cabextract ../"$1" ;;
+          *.jar) jar xf ../"$1" ;;
           *) echo "extract: '$1' - unknown archive method" ;;
         esac
 else
