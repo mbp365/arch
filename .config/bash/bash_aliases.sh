@@ -1,3 +1,6 @@
+#imperial
+alias runtests="runghc Tests.hs | grep \" / \""
+
 alias v="vim"
 alias sv="sudo vim"
 alias ka="killall"
@@ -22,8 +25,8 @@ alias newnet="sudo systemctl restart NetworkManager"
 alias testnet="curl -I http://google.com/"
 
 #hardware control
-alias sn="sudo shutdown now"
-alias rst="sudo reboot"
+alias sn="systemctl poweroff"
+alias rst="systemctl reboot"
 alias suspend="i3lock-fancy && systemctl suspend"
 
 #Mounting
