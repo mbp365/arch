@@ -1,6 +1,3 @@
-#imperial
-alias runtests="runghc Tests.hs | grep \" / \""
-
 alias v="vim"
 alias sv="sudo vim"
 alias ka="killall"
@@ -15,6 +12,9 @@ alias nf="clear && neofetch"
 alias gsd="sudo ~/.scripts/get-shit-done/get-shit-done.sh"
 alias turnoffmonitor="xrandr --output eDP-1 --off"
 alias h="history"
+
+#timer
+timer(){ utimer -c $1; paplay /usr/share/sounds/freedesktop/stereo/alarm-clock-elapsed.oga; }
 
 #pasting
 alias pastepic="xclip -selection clipboard -t image/png -o > pic.png"
