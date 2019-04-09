@@ -161,7 +161,6 @@ bindsym $mod+Shift+Tab workspace prev
 bindsym $mod+b exec $browser
 bindsym $mod+p exec pycharm
 bindsym $mod+g exec --no-startup-id gimp; workspace 5
-bindsym $mod+m workspace 3; exec ~/.scripts/music_tiling.sh
 bindsym $mod+Shift+m exec ~/.scripts/save_song_name.sh
 bindsym $mod+n exec $term -e ranger
 bindsym $mod+w exec $term -e newsboat
@@ -173,14 +172,12 @@ bindsym $mod+z gaps inner current set 0; gaps outer current set 0
 bindsym $mod+Shift+z gaps inner current set 10; gaps outer current set 10
 bindsym $mod+y gaps inner current plus 5
 bindsym $mod+Shift+y gaps inner current minus 5
-bindsym $mod+u exec --no-startup-id ~/.scripts/flash_win.sh
-bindsym $mod+Shift+u exec --no-startup-id transset-df --toggle 0.5 -a
 bindsym $mod+F1 exec --no-startup-id "i3lock-fancy && systemctl suspend"
-bindsym $mod+F2 exec --no-startup-id "nmcli radio wifi off"
-bindsym $mod+Shift+F2 exec --no-startup-id "nmcli radio wifi on"
+
 #hide everything bind:
 bindsym $mod+Delete exec feh --randomize --bg-fill ~/pictures/wallpapers
 bindsym $mod+Shift+Delete exec $mute ; workspace lmao ; exec $term -e htop ; exec $term -e ranger
+
 #music controls
 bindsym $mod+Pause exec --no-startup-id mpc toggle
 bindsym $mod+Right exec --no-startup-id mpc next
@@ -190,10 +187,12 @@ bindsym $mod+Shift+plus exec --no-startup-id mpc seek +20
 bindsym $mod+minus exec --no-startup-id mpc seek -10
 bindsym $mod+plus exec --no-startup-id mpc seek +10
 bindsym $mod+Up exec --no-startup-id mpc seek 0
+
 #print screens
 bindsym Print exec "scrot -e 'xclip -se c -t image/png ~/$f;rm ~/$f'"
 bindsym --release Shift+Print exec "scrot -s -e 'xclip -se c -t image/png ~/$f;rm ~/$f'"
 bindsym F12 exec "scrot -u"
+
 #screen record
 bindsym $mod+F8 exec "~/.scripts/screencap.sh & notify-send recording started"
 bindsym $mod+Shift+F8 exec "killall ffmpeg & notify-send recording ended"
@@ -216,7 +215,7 @@ exec --no-startup-id mpd
 exec --no-startup-id dunst
 
 #hide cursor
-exec --no-startup-id unclutter
+exec --no-startup-id unclutter --timeout 1 --ignore-scrolling
 
 #composting manager
 #exec --no-startup-id compton --xrender-sync --xrender-sync-fence
