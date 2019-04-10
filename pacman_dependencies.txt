@@ -41,7 +41,6 @@ mpc
 ncmpcpp
 gvim
 ttf-dejavu
-xf86-video-intel
 dunst
 cuetools
 shntool
@@ -62,3 +61,5 @@ pacman-mirrorlist
 tmux
 imagemagick
 ntp
+youtube-viewer
+newsboat
