@@ -13,12 +13,15 @@ git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
 
+cd ..
 yay --needed -S $(<aur_dependencies.txt)
 
 cp -rv .scripts ~/
-sudo cp -v override.conf /etc/systemd/system/getty@tty1.service.d/override.conf
+cp -rv .config ~/
 cp -v .Xdefaults ~/
 cp -v .bashrc ~/
 cp -v .vimrc ~/
-sudo cp -v xorg.conf /etc/X11/xorg.conf
 sudo pip install -r python_deps.txt
+
+sudo Xorg -configure
+sudo mv /root/xorg.conf.new /etc/X11/xorg.conf
