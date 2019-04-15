@@ -2,7 +2,6 @@ neofetch
 python-pywal
 bumblebee-status
 ttf-font-awesome
-pycharm-community
 discord
 slim
 split2flac
