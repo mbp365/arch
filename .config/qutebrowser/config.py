@@ -11,7 +11,7 @@ c.completion.web_history.max_items = 0
 # Page to open if :open -t/-b/-w is used without URL. Use `about:blank`
 # for a blank page.
 # Type: FuzzyUrl
-c.url.default_page = 'https://search.gibberfish.org/'
+c.url.default_page = 'https://search.snopyta.org/'
 
 # Search engines which can be used via the address bar. Maps a search
 # engine name (such as `DEFAULT`, or `ddg`) to a URL with a `{}`
@@ -22,12 +22,14 @@ c.url.default_page = 'https://search.gibberfish.org/'
 # used by prepending the search engine name to the search term, e.g.
 # `:open google qutebrowser`.
 # Type: Dict
-c.url.searchengines = {'DEFAULT': 'https://search.gibberfish.org/?q={}',
+c.url.searchengines = {'DEFAULT': 'https://search.snopyta.org/?q={}',
                         'google': 'google.com/search?q={}',
                         'googleimg': 'google.com/images?q={}'}
 
 # Bindings for normal mode
 config.bind('J', 'tab-prev')
 config.bind('K', 'tab-next')
+
+c.scrolling.bar = "never"
 
 config.source('qutewal.py')

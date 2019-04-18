@@ -44,7 +44,11 @@ if os.path.isfile(colors_absolute):
 
     # Background color of the selected completion item.
     # Type: QssColor
-    c.colors.completion.item.selected.bg = colors['colors']['color5']
+    c.colors.completion.item.selected.bg = colors['special']['background']
+
+    # Foreground color of the selected completion item.
+    # Type: QtColor
+    c.colors.completion.item.selected.fg = colors['colors']['color6']
 
     # Bottom border color of the selected completion item.
     # Type: QssColor
@@ -56,9 +60,6 @@ if os.path.isfile(colors_absolute):
     c.colors.completion.item.selected.border.top = colors['special'][
         'background']
 
-    # Foreground color of the selected completion item.
-    # Type: QtColor
-    c.colors.completion.item.selected.fg = colors['special']['foreground']
 
     # Foreground color of the matched text in the completion.
     # Type: QssColor
@@ -100,11 +101,11 @@ if os.path.isfile(colors_absolute):
     # Background color for hints. Note that you can use a `rgba(...)` value
     # for transparency.
     # Type: QssColor
-    c.colors.hints.bg = colors['colors']['color3']
+    c.colors.hints.bg = colors['special']['background']
 
     # Font color for hints.
     # Type: QssColor
-    c.colors.hints.fg = colors['special']['background']
+    c.colors.hints.fg = colors['special']['foreground']
 
     # Font color for the matched part of hints.
     # Type: QssColor
@@ -268,21 +269,13 @@ if os.path.isfile(colors_absolute):
     # Type: QssColor
     c.colors.statusbar.url.warn.fg = colors['colors']['color1']
 
-    # Background color of the tab bar.
-    # Type: QtColor
-    c.colors.tabs.bar.bg = colors['special']['background']
-
-    # Background color of unselected even tabs.
-    # Type: QtColor
-    c.colors.tabs.even.bg = colors['special']['background']
-
-    # Foreground color of unselected even tabs.
-    # Type: QtColor
-    c.colors.tabs.even.fg = colors['special']['foreground']
-
     # Color for the tab indicator on errors.
     # Type: QtColor
     c.colors.tabs.indicator.error = colors['colors']['color5']
+
+    # Background color of the tab bar.
+    # Type: QtColor
+    c.colors.tabs.bar.bg = colors['special']['background']
 
     # Color gradient start for the tab indicator.
     # Type: QtColor
@@ -301,17 +294,25 @@ if os.path.isfile(colors_absolute):
     #   - none: Don't show a gradient.
     c.colors.tabs.indicator.system = 'none'
 
+    # Background color of unselected even tabs.
+    # Type: QtColor
+    c.colors.tabs.even.bg = colors['special']['background']
+
+    # Foreground color of unselected even tabs.
+    # Type: QtColor
+    c.colors.tabs.even.fg = colors['colors']['color1']
+
     # Background color of unselected odd tabs.
     # Type: QtColor
     c.colors.tabs.odd.bg = colors['special']['background']
 
     # Foreground color of unselected odd tabs.
     # Type: QtColor
-    c.colors.tabs.odd.fg = colors['special']['foreground']
+    c.colors.tabs.odd.fg = colors['colors']['color1']
 
     # Background color of selected even tabs.
     # Type: QtColor
-    c.colors.tabs.selected.even.bg = colors['colors']['color2']
+    c.colors.tabs.selected.even.bg = colors['special']['background']
 
     # Foreground color of selected even tabs.
     # Type: QtColor
@@ -319,7 +320,7 @@ if os.path.isfile(colors_absolute):
 
     # Background color of selected odd tabs.
     # Type: QtColor
-    c.colors.tabs.selected.odd.bg = colors['colors']['color2']
+    c.colors.tabs.selected.odd.bg = colors['special']['background']
 
     # Foreground color of selected odd tabs.
     # Type: QtColor
