@@ -1,19 +1,17 @@
 URxvt.intensityStyles:	false
-URxvt.depth:		32
+URxvt.depth: 32
 URxvt.font: xft:Inconsolata:size=12
-URxvt.scrollBar:	false
-URxvt.cursorColor:	white
-URxvt.letterSpace:0
+URxvt.scrollBar: false
+URxvt.cursorColor: white
+URxvt.letterSpace: 0
 
 URxvt.perl-ext-common: default,clipboard,resize-font,selection-to-clipboard,url-select,font-size
 URxvt.keysym.C-V: perl:clipboard:paste
 URxvt.iso14755: False
-URxvt.url-launcher:	/usr/bin/firefox
-! url-select. We can middle-click on any url and this will launch the browser
-! defined by `URxvt.url-select.launcher`.
+URxvt.url-launcher: /usr/bin/qutebrowser
 URxvt.keysym.Control-l: perl:url-select:select_next
 URxvt.url-select.underline: true
-URxvt.url-select.launcher: firefox
+URxvt.url-select.launcher: qutebrowser
 
 URxvt.keysym.Control-Down: resize-font:smaller
 URxvt.keysym.Control-Up: resize-font:bigger
