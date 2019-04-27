@@ -48,7 +48,7 @@ if os.path.isfile(colors_absolute):
 
     # Foreground color of the selected completion item.
     # Type: QtColor
-    c.colors.completion.item.selected.fg = colors['colors']['color6']
+    c.colors.completion.item.selected.fg = colors['colors']['color5']
 
     # Bottom border color of the selected completion item.
     # Type: QssColor
@@ -125,7 +125,7 @@ if os.path.isfile(colors_absolute):
 
     # Background color of an error message.
     # Type: QssColor
-    c.colors.messages.error.bg = colors['colors']['color5']
+    c.colors.messages.error.bg = colors['special']['background']
 
     # Border color of an error message.
     # Type: QssColor
@@ -137,7 +137,7 @@ if os.path.isfile(colors_absolute):
 
     # Background color of an info message.
     # Type: QssColor
-    c.colors.messages.info.bg = colors['colors']['color4']
+    c.colors.messages.info.bg = colors['special']['background']
 
     # Border color of an info message.
     # Type: QssColor
@@ -149,7 +149,7 @@ if os.path.isfile(colors_absolute):
 
     # Background color of a warning message.
     # Type: QssColor
-    c.colors.messages.warning.bg = colors['colors']['color1']
+    c.colors.messages.warning.bg = colors['special']['background']
 
     # Border color of a warning message.
     # Type: QssColor
@@ -209,11 +209,11 @@ if os.path.isfile(colors_absolute):
 
     # Background color of the statusbar in insert mode.
     # Type: QssColor
-    c.colors.statusbar.insert.bg = colors['colors']['color2']
+    c.colors.statusbar.insert.bg = colors['special']['background']
 
     # Foreground color of the statusbar in insert mode.
     # Type: QssColor
-    c.colors.statusbar.insert.fg = colors['special']['background']
+    c.colors.statusbar.insert.fg = colors['special']['foreground']
 
     # Background color of the statusbar.
     # Type: QssColor
@@ -225,7 +225,7 @@ if os.path.isfile(colors_absolute):
 
     # Background color of the statusbar in passthrough mode.
     # Type: QssColor
-    c.colors.statusbar.passthrough.bg = colors['colors']['color4']
+    c.colors.statusbar.passthrough.bg = colors['special']['background']
 
     # Foreground color of the statusbar in passthrough mode.
     # Type: QssColor
@@ -245,11 +245,11 @@ if os.path.isfile(colors_absolute):
 
     # Foreground color of the URL in the statusbar on error.
     # Type: QssColor
-    c.colors.statusbar.url.error.fg = colors['colors']['color5']
+    c.colors.statusbar.url.error.fg = colors['special']['background']
 
     # Default foreground color of the URL in the statusbar.
     # Type: QssColor
-    c.colors.statusbar.url.fg = colors['special']['foreground']
+    c.colors.statusbar.url.fg = colors['colors']['color5']
 
     # Foreground color of the URL in the statusbar for hovered links.
     # Type: QssColor
@@ -329,7 +329,7 @@ if os.path.isfile(colors_absolute):
     # Background color for webpages if unset (or empty to use the theme's
     # color)
     # Type: QtColor
-    c.colors.webpage.bg = colors['special']['background']
+    c.colors.webpage.bg = "white" 
 
     if qutewal_dynamic_loading or bool(os.getenv('QUTEWAL_DYNAMIC_LOADING')):
         import signal

@@ -26,6 +26,8 @@ c.url.searchengines = {'DEFAULT': 'https://search.snopyta.org/?q={}',
                         'google': 'google.com/search?q={}',
                         'googleimg': 'google.com/images?q={}'}
 
+c.url.start_pages = "about:blank"
+
 # Bindings for normal mode
 config.bind('J', 'tab-prev')
 config.bind('K', 'tab-next')
