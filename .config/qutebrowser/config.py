@@ -28,6 +28,13 @@ c.url.searchengines = {'DEFAULT': 'https://search.snopyta.org/?q={}',
 
 c.url.start_pages = "about:blank"
 
+# Downloads
+
+c.downloads.remove_finished = 0
+c.downloads.location.prompt = false
+c.downloads.location.directory = "~/downloads"
+
+
 # Bindings for normal mode
 config.bind('J', 'tab-prev')
 config.bind('K', 'tab-next')
