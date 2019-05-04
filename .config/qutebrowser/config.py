@@ -31,9 +31,11 @@ c.url.start_pages = "about:blank"
 # Downloads
 
 c.downloads.remove_finished = 0
-c.downloads.location.prompt = false
+c.downloads.location.prompt = False
 c.downloads.location.directory = "~/downloads"
 
+config.bind(',m', 'hint links spawn magnet2torrent -m "{hint-url}" -o .config/rtorrent/watch/load/')
+config.bind(',M', 'hint -r links spawn magnet2torrent -m "{hint-url}" -o .config/rtorrent/watch/load/')
 
 # Bindings for normal mode
 config.bind('J', 'tab-prev')
