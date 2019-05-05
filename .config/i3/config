@@ -10,14 +10,8 @@ font pango:mono 9
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-# start a terminal
-bindsym $mod+t exec $term
-
 # kill focused window
 bindsym $mod+Shift+q kill
-
-#rofi
-bindsym $mod+d exec rofi -show run
 
 #colors
 set_from_resource $col1 i3wm.color2 #f0f0f0
@@ -129,23 +123,13 @@ bar {
         inactive_workspace $fg $bg $fg
         urgent_workspace   $col3 $bg $fg
     }
-	status_command bumblebee-status -m pacman caffeine memory pasink battery date time -p root.path=/ memory.format="{used}" root.format="{used}" spacer.text="|" time.format="%H:%M " date.format="%a, %b %d" -t wal
+	status_command bumblebee-status -m pacman nic memory pasink battery date time -p root.path=/ memory.format="{used}" root.format="{used}" spacer.text="|" time.format="%H:%M " date.format="%a, %b %d" -t wal
 }
 
 
 bindsym $mod+q bar mode toggle
-#no border
-for_window [class="^.*"] border pixel 3
+for_window [class="^.*"] border pixel 2
 for_window [class="URxvt" instance="music"] border pixel 0
-
-# Pulse Audio controls
-bindsym $mod+F12 exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +3% #increase sound volume
-bindsym $mod+F11 exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -3% #decrease sound volume
-bindsym $mod+F10 exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle # mute sound
-
-# Sreen brightness controls
-bindsym $mod+F6 exec xbacklight -inc 5 # increase screen brightness
-bindsym $mod+F5 exec xbacklight -dec 5 # decrease screen brightness
 
 # gaps
 gaps inner 10
@@ -154,25 +138,41 @@ gaps outer 10
 # coloscheme
 exec_always --no-startup-id wal -R
 
+#urxvt daemon
+exec --no-startup-id urxvtd --quiet --opendisplay --fork
+
 ####bindings#######
 #tab switch
 bindsym $mod+Tab workspace next
 bindsym $mod+Shift+Tab workspace prev
+
+#programs
 bindsym $mod+b exec $browser
 bindsym $mod+p exec pycharm
-bindsym $mod+g exec --no-startup-id gimp; workspace 5
+bindsym $mod+g exec --no-startup-id gimp
+
 bindsym $mod+n exec $term -e ranger
-bindsym $mod+w exec $term -e newsboat
 bindsym $mod+Shift+n exec $term -geometry 80x23 -name "floating_urxvt" -e ranger
-bindsym $mod+Shift+t exec --no-startup-id $term -geometry 80x23 -name "floating_urxvt"
+
+bindsym $mod+w exec $term -e newsboat
 bindsym $mod+Shift+w exec $term -geometry 80x23 -name "floating_urxvt" -e newsboat
-for_window [class="URxvt" instance="floating_urxvt$"] floating enable
+
+bindsym $mod+t exec $term
+bindsym $mod+Shift+t exec --no-startup-id $term -geometry 80x23 -name "floating_urxvt"
+
+bindsym $mod+m workspace 3;exec --no-startup-id ~/.scripts/music_tiling.sh
+bindsym $mod+c exec "~/.scripts/calcurse_tiling.sh"
+
+bindsym $mod+d exec rofi -show run
+
+#adjust gaps
 bindsym $mod+z gaps inner current set 0; gaps outer current set 0
 bindsym $mod+Shift+z gaps inner current set 10; gaps outer current set 10
 bindsym $mod+y gaps inner current plus 5
 bindsym $mod+Shift+y gaps inner current minus 5
+
+#screen lock
 bindsym $mod+F1 exec --no-startup-id "i3lock-fancy && systemctl suspend"
-bindsym $mod+m exec --no-startup-id ~/.scripts/music_tiling.sh
 
 #hide everything bind:
 bindsym $mod+Delete exec feh --randomize --bg-fill ~/pictures/wallpapers
@@ -194,6 +194,10 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle # mute sound
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle # mute sound
 
+# Screen brightness controls
+bindsym $mod+F6 exec xbacklight -inc 5 # increase screen brightness
+bindsym $mod+F5 exec xbacklight -dec 5 # decrease screen brightness
+
 #print screens
 bindsym Print exec "scrot -e 'xclip -se c -t image/png ~/$f;rm ~/$f'"
 bindsym --release Shift+Print exec "scrot -s -e 'xclip -se c -t image/png ~/$f;rm ~/$f'"
@@ -204,12 +208,14 @@ bindsym $mod+F8 exec "~/.scripts/screencap.sh & notify-send recording started"
 bindsym $mod+Shift+F8 exec "killall ffmpeg & notify-send recording ended"
 
 #app places
+for_window [class="URxvt" instance="floating_urxvt$"] floating enable
 assign [class="discord"] → 4
 assign [class="pycharm"] → 2
 for_window [title="GIMP Startup"] move workspace 5
 for_window [class="Gimp"] move workspace 5
 for_window [window_role="gimp-dock"] floating disable; move left; resize shrink width 50 px or 50ppt
 for_window [window_role="gimp-toolbox"] floating disable;  resize grow width 30 px or 30ppt
+
 #browser popups
 for_window [window_role="pop-up"] floating enable
 
@@ -226,10 +232,6 @@ exec --no-startup-id unclutter --timeout 1 --ignore-scrolling
 #composting manager
 #exec --no-startup-id compton --xrender-sync --xrender-sync-fence
 
-#urxvt daemon
-exec --no-startup-id urxvtd --quiet --opendisplay --fork
-
-#caps lock to esc
+#caps lock to esc and load keymap
 exec_always --no-startup-id setxkbmap -layout us -variant altgr-intl -option caps:escape
 exec_always --no-startup-id "sleep 7;xmodmap ~/.config/.Xmodmap"
-
