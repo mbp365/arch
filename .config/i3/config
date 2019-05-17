@@ -1,6 +1,6 @@
 #binds
 set $mute --no-startup-id pactl set-sink-mute 0 1
-set $term urxvtc
+set $term st
 set $mod Mod1
 set $music ncmpcpp
 set $browser qutebrowser
@@ -138,9 +138,6 @@ gaps outer 10
 # coloscheme
 exec_always --no-startup-id wal -R
 
-#urxvt daemon
-exec --no-startup-id urxvtd --quiet --opendisplay --fork
-
 ####bindings#######
 #tab switch
 bindsym $mod+Tab workspace next
@@ -220,6 +217,7 @@ for_window [window_role="gimp-toolbox"] floating disable;  resize grow width 30 
 for_window [window_role="pop-up"] floating enable
 
 #startup
+exec "~/.scripts/calcurse_tiling.sh"
 exec --no-startup-id $browser
 exec --no-startup-id mpd
 
