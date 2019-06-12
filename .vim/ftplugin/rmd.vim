@@ -1,3 +1,7 @@
+"going one line on the screen instead of one line of file
+noremap <silent> j gj
+noremap <silent> k gk
+
 "spellcheck
 setlocal spell
 set spelllang=en
