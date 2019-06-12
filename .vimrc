@@ -237,3 +237,7 @@ augroup templates
   " read in templates files
   autocmd BufNewFile *.* silent! execute '0r ~/.vim/templates/skeleton.'.expand("<afile>:e")
 augroup END
+
+" dont make tempfiles
+let skip_defaults_vim=1
+set viminfo=""
