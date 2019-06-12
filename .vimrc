@@ -214,16 +214,15 @@ colorscheme wal
 let g:tex_flavor='latex'
 
 vnoremap <C-c> :w !xclip -i -sel c<CR><CR>
-nnoremap <C-v> :r !xclip -o -sel -c<CR><CR>
 nnoremap x "_dl
 nnoremap X "_dh
 nnoremap U <C-r>
-let g:instant_markdown_autostart = 0
 
 "newlines
 nmap <CR> o<Esc>
 
 "MARKDOWN
+let g:instant_markdown_autostart = 0
 "Interpret .md files, etc. as .markdown
 let g:vimwiki_ext2syntax = {'.Rmd': 'markdown', '.rmd': 'markdown','.md': 'markdown', '.markdown': 'markdown', '.mdown': 'markdown'}
 
