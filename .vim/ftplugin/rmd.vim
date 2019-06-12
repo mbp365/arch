@@ -1,6 +1,7 @@
 "spellcheck
+setlocal spell
 set spelllang=en
-set spellfile=$HOME/.config/vim/spellcheckwords.add
+set spellfile=$HOME/.vim/spellcheckwords.add
 
 nmap <space><space> /<++><CR>xxxxi
 nmap zle i\begin{}<CR><CR>\end{<++>}<ESC>kk$i
