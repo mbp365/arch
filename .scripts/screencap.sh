@@ -1,6 +1,8 @@
 #!/bin/bash
 
 #This is the ffmpeg command that the screencast shortcut in i3 will run.
+#To make this record system audio, go to pavucontrol, recordings
+#and set the input to me the monitor of the system output
 
 #Picks a file name for the output file based on availability:
 
@@ -16,7 +18,6 @@ if [[ -f ~/output.mp4 ]]
 		filename="$HOME/output.mp4"
 fi
 
-#The actual ffmpeg command:
 
 ffmpeg \
 -f x11grab \
