@@ -1,3 +1,5 @@
+export PATH=$PATH:~/.local/bin
+
 #load aliases
 source ~/.config/bash/bash_aliases.sh
 
