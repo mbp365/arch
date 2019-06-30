@@ -1,1 +1,1 @@
-exec i3
+sh ~/.scripts/startup.sh; exec dwm
