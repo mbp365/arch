@@ -3,6 +3,8 @@
  * 2) pertag
  * 3) dwfifo (didnt work) */
 
+#include <X11/XF86keysym.h>
+
 /* appearance */
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
@@ -66,7 +68,7 @@ static const Layout layouts[] = {
 /* helper for spawning shell commands in the pre dwm-5.0 fashion */
 #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
 
-static char *term = "st";
+#define term "st"
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
@@ -78,6 +80,12 @@ static const char *browsercmd[]  = { "qutebrowser", NULL };
 static const char *printWholeScreen[]  = { "bash", "/home/max/.scripts/print_screens/print_whole_screen.sh", NULL };
 static const char *printSelection[]  = { "bash","/home/max/.scripts/print_screens/print_selection.sh", NULL };
 static const char *music[]  = { term, "-e", "ncmpcpp", NULL };
+static const char *screenLock[]  = { "i3lock-fancy", "&&", "systemctl", "suspend", NULL };
+
+static const char *volumeUp[] = { "pactl", "set-sink-volume", "@DEFAULT_SINK@", "+5%", NULL};
+static const char *volumeDown[] = { "pactl", "set-sink-volume", "@DEFAULT_SINK@", "-5%", NULL};
+static const char *volumeMute[] = { "pactl", "set-sink-mute", "@DEFAULT_SINK@", "toggle", NULL};
+static const char *micMute[] = { "pactl", "set-source-mute", "@DEFAULT_SOURCE@", "toggle", NULL};
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -89,6 +97,12 @@ static Key keys[] = {
 	{ MODKEY,                       XK_Print,  spawn,          {.v = printSelection } },
 	{ MODKEY|ShiftMask,             XK_Print,  spawn,          {.v = printWholeScreen } },
 	{ MODKEY,                       XK_m,      spawn,          {.v = music } },
+	{ MODKEY,                       XK_F1,     spawn,          {.v = screenLock} },
+
+	{ 0,                            XF86XK_AudioRaiseVolume,     spawn,     {.v = volumeUp } },
+	{ 0,                            XF86XK_AudioLowerVolume,     spawn,     {.v = volumeDown } },
+	{ 0,                            XF86XK_AudioMute,            spawn,     {.v = volumeMute } },
+	{ 0,                            XF86XK_AudioMicMute,         spawn,     {.v = micMute } },
 
     { MODKEY|ShiftMask,             XK_Return, zoom,           {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
