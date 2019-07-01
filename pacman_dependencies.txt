@@ -12,7 +12,6 @@ wavpack
 opusfile
 libpulse
 gimp
-i3-gaps
 youtube-dl
 scrot
 pavucontrol
