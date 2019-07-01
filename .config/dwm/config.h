@@ -66,16 +66,18 @@ static const Layout layouts[] = {
 /* helper for spawning shell commands in the pre dwm-5.0 fashion */
 #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
 
+static char *term = "st";
+
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
-static const char *termcmd[]  = { "st", NULL };
-static const char *filebrowsercmd[]  = { "st", "-e", "ranger", NULL };
-static const char *newsboat[]  = { "st", "-e", "newsboat", NULL };
+static const char *termcmd[]  = { term, NULL };
+static const char *filebrowsercmd[]  = { term, "-e", "ranger", NULL };
+static const char *newsboat[]  = { term, "-e", "newsboat", NULL };
 static const char *browsercmd[]  = { "qutebrowser", NULL };
 static const char *printWholeScreen[]  = { "bash", "/home/max/.scripts/print_screens/print_whole_screen.sh", NULL };
 static const char *printSelection[]  = { "bash","/home/max/.scripts/print_screens/print_selection.sh", NULL };
-static const char *music[]  = { "st", "-e", "ncmpcpp", NULL };
+static const char *music[]  = { term, "-e", "ncmpcpp", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
