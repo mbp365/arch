@@ -75,7 +75,7 @@ static const char *newsboat[]  = { "st", "-e", "newsboat", NULL };
 static const char *browsercmd[]  = { "qutebrowser", NULL };
 static const char *printWholeScreen[]  = { "bash", "/home/max/.scripts/print_screens/print_whole_screen.sh", NULL };
 static const char *printSelection[]  = { "bash","/home/max/.scripts/print_screens/print_selection.sh", NULL };
-static const char *music[]  = { "bash", "/home/max/.scripts/music_tiling.sh", NULL };
+static const char *music[]  = { "st", "-e", "ncmpcpp", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
