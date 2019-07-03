@@ -87,6 +87,12 @@ static const char *volumeDown[] = { "pactl", "set-sink-volume", "@DEFAULT_SINK@"
 static const char *volumeMute[] = { "pactl", "set-sink-mute", "@DEFAULT_SINK@", "toggle", NULL};
 static const char *micMute[] = { "pactl", "set-source-mute", "@DEFAULT_SOURCE@", "toggle", NULL};
 
+static const char *musicToggle[] = {"mpc", "toggle", NULL};
+static const char *musicNext[] = {"mpc", "next", NULL};
+static const char *musicPrev[] = {"mpc", "prev", NULL};
+static const char *musicBack[] = {"mpc", "seek", "-10", NULL};
+static const char *musicForward[] = {"mpc", "seek", "+10", NULL};
+
 static Key keys[] = {
 	/* modifier           key        function        argument */
 	{ MODKEY,             XK_d,      spawn,          {.v = dmenucmd } },
@@ -94,7 +100,7 @@ static Key keys[] = {
 	{ MODKEY,             XK_b,      spawn,          {.v = browsercmd} },
 	{ MODKEY,             XK_n,      spawn,          {.v = filebrowsercmd} },
 	{ MODKEY,             XK_w,      spawn,          {.v = newsboat} },
-	{ ShiftMask,          XK_Print,  spawn,          {.v = printSelection } },
+	{ MODKEY,             XK_Print,  spawn,          {.v = printSelection } },
 	{ 0,                  XK_Print,  spawn,          {.v = printWholeScreen } },
 	{ MODKEY,             XK_m,      spawn,          {.v = music } },
 	{ MODKEY,             XK_F1,     spawn,          {.v = screenLock} },
@@ -103,6 +109,12 @@ static Key keys[] = {
 	{ 0,                  XF86XK_AudioLowerVolume,     spawn,     {.v = volumeDown } },
 	{ 0,                  XF86XK_AudioMute,            spawn,     {.v = volumeMute } },
 	{ 0,                  XF86XK_AudioMicMute,         spawn,     {.v = micMute } },
+
+	{ MODKEY,             XK_End,     spawn,     {.v = musicToggle } },
+	{ MODKEY|ShiftMask,   XK_Left,    spawn,     {.v = musicNext } },
+	{ MODKEY|ShiftMask,   XK_Right,   spawn,     {.v = musicPrev } },
+	{ MODKEY,             XK_Left,    spawn,     {.v = musicBack } },
+	{ MODKEY,             XK_Right,   spawn,     {.v = musicForward } },
 
     { MODKEY|ShiftMask,   XK_Return, zoom,           {0} },
 	{ MODKEY,             XK_j,      focusstack,     {.i = +1 } },
