@@ -93,6 +93,9 @@ static const char *musicPrev[] = {"mpc", "prev", NULL};
 static const char *musicBack[] = {"mpc", "seek", "-10", NULL};
 static const char *musicForward[] = {"mpc", "seek", "+10", NULL};
 
+static const char *screencapStart[]  = { "bash", "/home/max/.scripts/screencap/start.sh", NULL };
+static const char *screencapStop[]  = { "bash", "/home/max/.scripts/screencap/stop.sh", NULL };
+
 static Key keys[] = {
 	/* modifier           key        function        argument */
 	{ MODKEY,             XK_d,      spawn,          {.v = dmenucmd } },
@@ -104,6 +107,8 @@ static Key keys[] = {
 	{ 0,                  XK_Print,  spawn,          {.v = printWholeScreen } },
 	{ MODKEY,             XK_m,      spawn,          {.v = music } },
 	{ MODKEY,             XK_F1,     spawn,          {.v = screenLock} },
+	{ MODKEY,             XK_F7,     spawn,          {.v = screencapStart} },
+	{ MODKEY|ShiftMask,   XK_F7,     spawn,          {.v = screencapStop} },
 
 	{ 0,                  XF86XK_AudioRaiseVolume,     spawn,     {.v = volumeUp } },
 	{ 0,                  XF86XK_AudioLowerVolume,     spawn,     {.v = volumeDown } },
@@ -128,8 +133,6 @@ static Key keys[] = {
 	{ MODKEY,             XK_t,      setlayout,      {.v = &layouts[0]} },
 	{ MODKEY,             XK_f,      setlayout,      {0} },
 	{ MODKEY,             XK_space,  togglefloating, {0} },
-	{ MODKEY,             XK_0,      view,           {.ui = ~0 } },
-	{ MODKEY|ShiftMask,   XK_0,      tag,            {.ui = ~0 } },
 	{ MODKEY,             XK_comma,  focusmon,       {.i = -1 } },
 	{ MODKEY,             XK_period, focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,   XK_comma,  tagmon,         {.i = -1 } },
