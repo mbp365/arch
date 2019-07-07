@@ -238,5 +238,4 @@ augroup templates
 augroup END
 
 " dont make tempfiles
-let skip_defaults_vim=1
-set viminfo=""
+set viminfo+=n~/.vim/viminfo
