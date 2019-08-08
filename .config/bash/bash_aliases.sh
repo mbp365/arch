@@ -1,7 +1,7 @@
 alias v="vim"
 alias sv="sudo vim"
 alias ka="killall"
-alias r="ranger"
+alias r="ranger-cd"
 alias ls='ls -hN --color=auto --group-directories-first'
 alias mkdir="mkdir -pv"
 alias p="sudo pacman"
@@ -14,6 +14,7 @@ alias turnoffmonitor="xrandr --output eDP-1 --off"
 alias h="history"
 alias y="youtube-viewer"
 alias c="calcurse"
+alias webcam="mpv /dev/video0"
 
 #timer
 timer(){ utimer -c $1m; paplay /usr/share/sounds/freedesktop/stereo/alarm-clock-elapsed.oga; }
