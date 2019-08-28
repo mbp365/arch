@@ -42,6 +42,10 @@ config.bind(',f', 'hint -r links tab-bg')
 config.bind('J', 'tab-prev')
 config.bind('K', 'tab-next')
 
+# Copying
+config.bind('yf', 'hint links yank-primary')
+config.bind('yy', 'yank -s')
+
 c.scrolling.bar = "never"
 
 config.source('qutewal.py')
