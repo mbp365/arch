@@ -1,3 +1,9 @@
+alias pintos="/home/max/code/pintos/pintos_26/src/utils/pintos"
+alias pintos-mkdisk="/home/max/code/pintos/pintos_26/src/utils/pintos-mkdisk"
+alias pintos-gdb="/home/max/code/pintos/pintos_26/src/utils/pintos-gdb"
+alias backtrace="/home/max/code/pintos/pintos_26/src/utils/backtrace"
+alias qemu-system-i386="qemu-system-x86_64"
+
 alias v="vim"
 alias sv="sudo vim"
 alias ka="killall"
@@ -15,6 +21,7 @@ alias h="history"
 alias y="youtube-viewer"
 alias c="calcurse"
 alias webcam="mpv /dev/video0"
+alias py="ipython"
 
 #timer
 timer(){ utimer -c $1m; paplay /usr/share/sounds/freedesktop/stereo/alarm-clock-elapsed.oga; }
@@ -66,7 +73,8 @@ alias gcma="git commit --amend"
 alias gclone="git clone"
 alias grebase="git rebase"
 alias greset="git reset"
-alias grh="git reset HEAD"
+alias gr="git restore"
+alias grs="git restore --staged"
 alias gm="git merge"
 alias grm="git rm"
 alias ga="git add"
