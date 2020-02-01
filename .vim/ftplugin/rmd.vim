@@ -11,7 +11,7 @@ nmap <space><space> /<++><CR>xxxxi
 nmap zle i\begin{}<CR><CR>\end{<++>}<ESC>kk$i
 nmap zli i\textit{}<ESC>i
 nmap zlb i\textbf{}<ESC>i
-nmap zlt i\text{}<ESC>i
+nmap zlt i\texttt{}<ESC>i
 nmap zla i\begin{align*}<CR><CR>\end{align*}<ESC>ki
 nmap zlp i\begin{proof}<CR><CR>\end{proof}<ESC>ki
 nmap zlf i\dfrac{}{<++>}<ESC>6hi
